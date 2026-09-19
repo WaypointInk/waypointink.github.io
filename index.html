@@ -189,6 +189,71 @@ font-size:.8rem;
 @media (prefers-reduced-motion: reduce){
 .door{transition:none;}
 }
+
+/* ---------- NEWSLETTER ---------- */
+.newsletter{
+max-width:440px;
+width:calc(100% - 40px);
+margin:22px auto 6px;
+--nl-accent:var(--hub-accent);
+}
+.newsletter .nl-title{
+display:block;
+font-family:'Fraunces', Georgia, serif;
+font-size:1.15rem;
+font-weight:500;
+margin-bottom:6px;
+}
+.newsletter .nl-copy{
+color:var(--hub-ink-soft);
+font-size:.9rem;
+line-height:1.55;
+margin-bottom:14px;
+}
+.newsletter .nl-row{
+display:flex;
+gap:8px;
+}
+.newsletter input[type="email"]{
+flex:1;
+min-width:0;
+padding:11px 14px;
+font:inherit;
+font-size:.95rem;
+color:var(--hub-ink);
+background:#fff;
+border:1px solid var(--hub-line);
+border-radius:6px;
+}
+.newsletter input[type="email"]:focus{
+outline:2px solid var(--nl-accent);
+outline-offset:1px;
+border-color:var(--nl-accent);
+}
+.newsletter button{
+padding:11px 18px;
+font-family:var(--mono);
+font-size:12px;
+letter-spacing:.08em;
+text-transform:uppercase;
+color:#fff;
+background:var(--nl-accent);
+border:0;
+border-radius:6px;
+cursor:pointer;
+}
+.newsletter button:hover{filter:brightness(1.1);}
+.newsletter button:disabled{opacity:.6; cursor:default;}
+.newsletter .nl-hp{position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden;}
+.newsletter .nl-status{
+min-height:1.4em;
+margin-top:10px;
+font-size:.85rem;
+color:var(--hub-ink-soft);
+}
+.newsletter .nl-status.ok{color:#2F6B3F;}
+.newsletter .nl-status.err{color:#A63D2F;}
+@media (max-width:420px){ .newsletter .nl-row{flex-direction:column;} }
 </style>
 
 <section class="hub">
@@ -220,6 +285,17 @@ font-size:.8rem;
 <footer>
 <div class="wrap">
 <div class="brandline">Waypoint Ink</div>
+<form class="newsletter" action="https://formspree.io/f/mljdgdzg" method="POST">
+<label class="nl-title" for="nl-email">Join the Waypoint Ink letter</label>
+<p class="nl-copy">New releases, first looks, and news from every trail. Sent rarely, unsubscribe anytime.</p>
+<div class="nl-row">
+<input type="email" id="nl-email" name="email" placeholder="you@example.com" required autocomplete="email">
+<button type="submit">Subscribe</button>
+</div>
+<input type="hidden" name="source" value="home">
+<div class="nl-hp" aria-hidden="true"><input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></div>
+<p class="nl-status" role="status" aria-live="polite"></p>
+</form>
 <div class="links">
 <a href="https://instagram.com/waypointink" target="_blank" rel="noopener">Instagram</a>
 <a href="https://facebook.com/waypointink" target="_blank" rel="noopener">Facebook</a>
@@ -229,5 +305,23 @@ font-size:.8rem;
 </div>
 </footer>
 
+<script>
+(function(){
+var f=document.querySelector('form.newsletter');
+if(!f||!window.fetch) return;
+f.addEventListener('submit',function(e){
+e.preventDefault();
+var s=f.querySelector('.nl-status'), b=f.querySelector('button');
+b.disabled=true; s.className='nl-status'; s.textContent='Sending…';
+fetch(f.action,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}})
+.then(function(r){
+if(r.ok){ f.reset(); s.className='nl-status ok'; s.textContent='Thank you — you\u2019re on the list.'; }
+else { s.className='nl-status err'; s.textContent='Something went wrong. Please try again, or email hello@waypointink.com.'; }
+})
+.catch(function(){ s.className='nl-status err'; s.textContent='Could not connect. Please try again in a moment.'; })
+.then(function(){ b.disabled=false; });
+});
+})();
+</script>
 </body>
 </html>
