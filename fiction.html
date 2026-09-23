@@ -382,6 +382,16 @@ color:var(--hub-ink-soft);
 @media (prefers-reduced-motion: reduce){ .buy-btn{transition:none;} }
 .site-header{--sh-ink:var(--fic-ink); --sh-ink-soft:var(--fic-ink-soft); --sh-accent:var(--fic-accent); --sh-cta-ink:#fff; --sh-line:var(--fic-line);}
 footer{padding-inline:20px;}
+
+/* ---------- CLICKABLE BOOK CARDS ---------- */
+.book, .series-card{position:relative; transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;}
+.book:has(.card-link):hover, .series-card:has(.card-link):hover{transform:translateY(-4px); box-shadow:0 22px 40px -24px rgba(0,0,0,.55);}
+.card-link{display:inline-flex; align-items:center; gap:6px; margin-top:16px; font-family:'IBM Plex Mono', ui-monospace, monospace; font-size:11px; letter-spacing:.1em; text-transform:uppercase; text-decoration:none; color:var(--link-c, currentColor);}
+.card-link::after{content:""; position:absolute; inset:0; z-index:1;}
+.card-link:focus-visible{outline:2px solid currentColor; outline-offset:4px;}
+.buy-btn{position:relative; z-index:2;}
+.book .card-link{color:var(--fic-accent);}
+.book:has(.card-link):hover{border-color:var(--fic-accent);}
 </style>
 </head>
 <body>
@@ -426,6 +436,7 @@ footer{padding-inline:20px;}
 <h3>Static</h3>
 <p>After the crash that should have killed them both, Eli wakes up to rebuild a life that no longer fits — a fiancée who's already gone, a memory that won't hold still, and a feeling he can't shake that some part of that night never actually ended. Twenty years, two cats named Static and Void, and a quiet certainty that something didn't add up.</p>
 <span class="tag">Slipstream novel</span>
+<a class="card-link" href="books/static.html">About the book &amp; excerpt <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="width:13px;height:13px"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
 </div>
 </div>
 
@@ -457,6 +468,7 @@ footer{padding-inline:20px;}
 <h3>Where the Ley Runs Dry</h3>
 <p>Sorrel, Roan, and Fen cross a post-apocalyptic fantasy landscape where the magic itself is running out. A slow-burn romance threads through their journey across a world running dry.</p>
 <span class="tag">YA / NA fantasy</span>
+<a class="card-link" href="books/where-the-ley-runs-dry.html">About the book &amp; excerpt <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="width:13px;height:13px"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
 </div>
 </div>
 
@@ -488,6 +500,7 @@ footer{padding-inline:20px;}
 <h3>Where the Ash Blooms</h3>
 <p>Two hundred years after the mountain buried the world in ash, an underground forager and a surface scout are drawn together by dreams neither of them asked for — and a dying man's notebook that says the mountain isn't finished yet.</p>
 <span class="tag">Post-apocalyptic steampunk romantasy · Book One of The Emberhill Chronicles</span>
+<a class="card-link" href="books/where-the-ash-blooms.html">About the book &amp; excerpt <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="width:13px;height:13px"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
 </div>
 </div>
 
