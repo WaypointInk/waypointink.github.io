@@ -3,13 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fiction · Waypoint Ink</title>
+<title>Fiction by J.R. Deem · Waypoint Ink</title>
+<meta name="description" content="Slipstream and YA/NA fantasy novels by J.R. Deem: Static, Where the Ley Runs Dry, and Where the Ash Blooms.">
+<link rel="canonical" href="https://waypointink.com/fiction.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Waypoint Ink">
+<meta property="og:title" content="Fiction by J.R. Deem · Waypoint Ink">
+<meta property="og:description" content="Slipstream and YA/NA fantasy novels by J.R. Deem: Static, Where the Ley Runs Dry, and Where the Ash Blooms.">
+<meta property="og:url" content="https://waypointink.com/fiction.html">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#14161B">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2314161B'/%3E%3Cpath d='M32 12 L44 40 L32 34 L20 40 Z' fill='%23D7B79E'/%3E%3Ccircle cx='32' cy='50' r='3' fill='%23D7B79E'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Source+Serif+4:ital,wght@0,400;0,500;1,400;1,500&family=Baloo+2:wght@500;600;700&family=Nunito:ital,wght@0,400;0,600;0,700;1,600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
-</head>
-<body>
-
 <style>
 :root{
 --hub-bg:#EDEEEB;
@@ -357,14 +364,31 @@ color:var(--hub-ink-soft);
 .newsletter .nl-status.ok{color:#2F6B3F;}
 .newsletter .nl-status.err{color:#A63D2F;}
 @media (max-width:420px){ .newsletter .nl-row{flex-direction:column;} }
+
+/* ---------- SITE HEADER ---------- */
+.site-header{position:relative; z-index:5; padding:18px 24px; border-bottom:1px solid var(--sh-line);}
+.site-header .sh-inner{max-width:1040px; margin-inline:auto; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;}
+.site-header .sh-brand{font-family:'Fraunces', Georgia, serif; font-weight:600; font-size:1.15rem; letter-spacing:.01em; text-decoration:none; color:var(--sh-ink);}
+.site-header nav{display:flex; gap:22px; flex-wrap:wrap; align-items:center;}
+.site-header nav a{font-family:'IBM Plex Mono', ui-monospace, monospace; font-size:11.5px; letter-spacing:.1em; text-transform:uppercase; text-decoration:none; color:var(--sh-ink-soft); padding-block:4px; border-bottom:1px solid transparent; transition:color .2s ease, border-color .2s ease;}
+.site-header nav a:hover, .site-header nav a[aria-current="page"]{color:var(--sh-ink); border-color:var(--sh-accent);}
+.site-header nav a.sh-cta{color:var(--sh-cta-ink); background:var(--sh-accent); padding:8px 14px; border-radius:999px; border:0;}
+.site-header nav a.sh-cta:hover{filter:brightness(1.08); color:var(--sh-cta-ink);}
+@media (max-width:560px){ .site-header .sh-inner{justify-content:center;} .site-header nav{justify-content:center; gap:16px;} }
+.nl-privacy{margin-top:6px; font-size:.78rem; opacity:.75;}
+.buy-btn{display:inline-flex; align-items:center; gap:8px; margin-top:16px; padding:11px 20px; border-radius:999px; background:var(--buy-bg, #D97C5F); color:#fff !important; text-decoration:none; font-weight:700; font-size:.95rem; letter-spacing:.01em; box-shadow:0 6px 16px -8px rgba(0,0,0,.45); transition:transform .2s ease, filter .2s ease;}
+.buy-btn:hover{transform:translateY(-2px); filter:brightness(1.06);}
+.buy-btn svg{width:14px; height:14px;}
+@media (prefers-reduced-motion: reduce){ .buy-btn{transition:none;} }
+.site-header{--sh-ink:var(--fic-ink); --sh-ink-soft:var(--fic-ink-soft); --sh-accent:var(--fic-accent); --sh-cta-ink:#fff; --sh-line:var(--fic-line);}
+footer{padding-inline:20px;}
 </style>
+</head>
+<body>
+
 
 <div class="fic-atmosphere">
-<div class="backnav">
-<div class="wrap">
-<a href="index.html">← Waypoint Ink</a>
-</div>
-</div>
+<header class="site-header"><div class="sh-inner"><a class="sh-brand" href="index.html">Waypoint Ink</a><nav aria-label="Main"><a href="fiction.html" aria-current="page">Fiction</a><a href="kids.html">Children's Books</a><a class="sh-cta" href="https://www.amazon.com/gp/product/B0HG76LPZM" target="_blank" rel="noopener">Buy Echo’s ABC</a></nav></div></header>
 
 <section class="fiction" id="fiction">
 <div class="wrap">
@@ -431,7 +455,7 @@ color:var(--hub-ink-soft);
 <div class="book-body">
 <span class="status">In progress</span>
 <h3>Where the Ley Runs Dry</h3>
-<p>Sorrel, Roan, and Fen cross a post-apocalyptic fantasy landscape where the magic itself is running out. A slow-burn romance threads through a 27-chapter adventure toward an ~87,000-word finish.</p>
+<p>Sorrel, Roan, and Fen cross a post-apocalyptic fantasy landscape where the magic itself is running out. A slow-burn romance threads through their journey across a world running dry.</p>
 <span class="tag">YA / NA fantasy</span>
 </div>
 </div>
@@ -477,22 +501,24 @@ color:var(--hub-ink-soft);
 <footer>
 <div class="wrap">
 <div class="brandline">Waypoint Ink</div>
-<form class="newsletter" action="https://formspree.io/f/mljdgdzg" method="POST">
+<form class="newsletter" id="newsletter" action="https://formspree.io/f/mljdgdzg" method="POST">
 <label class="nl-title" for="nl-email">Follow the signal</label>
 <p class="nl-copy">Release news and first looks at J.R. Deem's fiction, sent only when there's something worth saying.</p>
 <div class="nl-row">
 <input type="email" id="nl-email" name="email" placeholder="you@example.com" required autocomplete="email">
 <button type="submit">Subscribe</button>
 </div>
+<input type="hidden" name="_subject" value="New Waypoint Ink subscriber (Fiction page)">
 <input type="hidden" name="source" value="fiction">
 <div class="nl-hp" aria-hidden="true"><input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></div>
 <p class="nl-status" role="status" aria-live="polite"></p>
+<p class="nl-privacy">Your email stays with Waypoint Ink and is never sold or shared.</p>
 </form>
 <div class="links">
 <a href="https://instagram.com/waypointink" target="_blank" rel="noopener">Instagram</a>
 <a href="mailto:hello@waypointink.com">hello@waypointink.com</a>
 </div>
-<div class="fine">© 2026 Waypoint Ink. J.R. Deem and Jessica Sellars are pen names of the same author.</div>
+<div class="fine">© 2026 Waypoint Ink. All rights reserved. J.R. Deem and Jessica Sellars are pen names of the same author.</div>
 </div>
 </footer>
 
