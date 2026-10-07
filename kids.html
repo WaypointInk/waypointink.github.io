@@ -341,14 +341,20 @@ position:relative;
 z-index:0;
 pointer-events:none;
 }
-@media (min-width:900px){ .breed-card .flight-map{margin-bottom:-72px;} }
+@media (min-width:900px){ .breed-card .flight-map{margin-bottom:-44px;} }
 .breed-card .breed-photo img{position:relative; z-index:1;}
 .flight-map .fm-route{fill:none; stroke:var(--kid-accent-3); stroke-width:2.4; stroke-linecap:round; stroke-dasharray:0.1 9; opacity:.75;}
-.flight-map .fm-land{fill:var(--kid-accent); opacity:.16;}
-.flight-map .fm-label{font-family:var(--mono); font-size:11.5px; letter-spacing:.06em; text-transform:uppercase; fill:var(--kid-ink-soft);}
-.flight-map .fm-name{font-family:'Baloo 2', sans-serif; font-weight:700; font-size:15px; fill:var(--kid-ink);}
+.breed-card .breed-map{display:block; width:100%; max-width:470px; height:auto; margin:0 auto 18px;}
+.breed-map .fm-state{fill:var(--kid-accent-2); fill-opacity:.35; stroke:var(--kid-accent-2); stroke-width:1.2; stroke-linejoin:round;}
+.breed-map .fm-leader{fill:none; stroke:var(--kid-ink-soft); stroke-width:1.2; stroke-dasharray:0.1 5; stroke-linecap:round;}
+.breed-map .fm-sea{font-family:var(--mono); font-size:11px; font-style:italic; letter-spacing:.08em; fill:var(--kid-accent-3); opacity:.6;}
+.flight-map .fm-land, .breed-map .fm-land{fill:var(--kid-accent); fill-opacity:.2; stroke:var(--kid-accent); stroke-opacity:.45; stroke-width:1; stroke-linejoin:round;}
+.flight-map .fm-border{fill:none; stroke:var(--kid-accent); stroke-opacity:.5; stroke-width:1; stroke-dasharray:3 3;}
+.flight-map .fm-country, .breed-map .fm-country{font-family:var(--mono); font-size:11px; font-weight:600; letter-spacing:.14em; fill:var(--kid-accent); opacity:.9;}
+.flight-map .fm-label, .breed-map .fm-label{font-family:var(--mono); font-size:11.5px; letter-spacing:.06em; text-transform:uppercase; fill:var(--kid-ink-soft);}
+.flight-map .fm-name, .breed-map .fm-name{font-family:'Baloo 2', sans-serif; font-weight:700; font-size:15px; fill:var(--kid-ink);}
 .flight-map .fm-miles{font-family:'Baloo 2', sans-serif; font-weight:700; font-size:15px; fill:var(--kid-accent-3);}
-@media (max-width:600px){ .flight-map .fm-name{font-size:28px;} .flight-map .fm-label{font-size:17px; letter-spacing:0;} .flight-map .fm-miles{font-size:24px; transform:translate(-40px,18px);} }
+@media (max-width:600px){ .flight-map .fm-name{font-size:28px;} .breed-map .fm-name{font-size:20px;} .flight-map .fm-label, .breed-map .fm-label{font-size:12px; letter-spacing:0;} .breed-map .fm-sea{font-size:13px;} .flight-map .fm-miles{font-size:24px;} .flight-map .fm-country{font-size:18px;} }
 .fact-grid{
 display:grid;
 grid-template-columns:repeat(2, 1fr);
@@ -602,51 +608,43 @@ footer{padding-inline:20px;}
 </div>
 </div>
 <figure class="breed-photo">
-<svg class="flight-map" viewBox="0 0 820 200" role="img" aria-labelledby="fm-title">
-<title id="fm-title">Map doodle: a little airplane flying along a dotted line from Jindo Island, South Korea to Seattle, Washington, about 5,300 miles</title>
-<!-- Korea -->
-<path class="fm-land" transform="translate(26 0)" d="M58 62 C 70 52, 88 56, 92 68 C 98 82, 104 92, 102 106 C 100 118, 92 124, 80 122 C 68 120, 60 112, 62 100 C 64 90, 54 80, 58 62 Z"/>
-<ellipse class="fm-land" cx="110" cy="132" rx="7" ry="4"/>
-<!-- Seattle / PNW -->
-<path class="fm-land" transform="translate(146 0)" d="M534 70 C 556 60, 596 58, 612 66 C 626 74, 628 118, 612 128 C 596 134, 574 132, 552 126 C 540 122, 530 110, 534 96 C 536 88, 528 78, 534 70 Z"/>
+<svg class="flight-map" viewBox="0 0 820 240" role="img" aria-labelledby="fm-title">
+<title id="fm-title">Map doodle: a little airplane flying along a dotted line from Jindo Island, South Korea to Seattle, Washington in the USA, about 5,300 miles</title>
+<!-- Korean peninsula -->
+<path class="fm-land" d="M32.4 71.4 L58.8 60.0 L92.4 37.2 L121.2 44.8 L128.4 33.4 L159.6 25.8 L181.2 25.8 L159.6 52.4 L147.6 58.1 L133.2 67.6 L109.2 75.2 L104.4 84.7 L114.0 88.5 L128.4 98.0 L142.8 113.2 L152.4 128.4 L152.4 147.4 L154.8 156.9 L145.2 164.5 L133.2 168.3 L114.0 172.1 L104.4 175.9 L85.2 179.7 L78.0 174.0 L82.8 166.4 L80.4 155.0 L87.6 147.4 L75.6 134.1 L82.8 128.4 L87.6 118.9 L73.2 115.1 L54.0 115.1 L42.0 109.4 L54.0 98.0 L49.2 90.4 L56.4 82.8 L39.6 79.0 Z"/>
+<path class="fm-border" d="M73.2 114.2 L97.2 103.7 L128.4 98.0"/>
+<ellipse class="fm-land fm-jindo" cx="76.8" cy="176.8" rx="5" ry="3.5"/>
+<!-- USA -->
+<path class="fm-land" d="M632.9 74.0 L638.2 71.8 L725.0 71.8 L743.6 75.4 L757.5 80.8 L763.8 85.1 L762.2 97.0 L774.6 92.3 L783.9 89.8 L787.0 86.2 L799.4 86.2 L805.6 77.6 L811.8 86.2 L802.5 91.2 L801.0 97.7 L790.1 102.4 L783.9 111.4 L785.5 120.4 L780.8 124.0 L768.4 134.8 L771.5 151.0 L770.9 157.1 L766.9 155.3 L763.1 147.4 L758.2 140.2 L751.4 138.8 L742.0 140.2 L740.5 143.1 L728.1 141.6 L718.2 148.1 L717.6 154.6 L711.0 149.2 L704.9 140.9 L700.2 143.8 L695.5 141.3 L689.4 133.7 L684.1 135.5 L675.4 135.5 L663.6 131.2 L656.5 131.2 L652.1 125.8 L645.6 123.6 L639.8 113.2 L635.1 102.4 L633.9 93.4 L635.1 82.6 Z"/>
 <!-- route -->
-<path class="fm-route" d="M110 128 Q 411 -40 712 114"/>
-<!-- start pin: Jindo -->
-<circle cx="110" cy="128" r="9" fill="var(--kid-accent-2)" opacity=".18"/>
-<circle cx="110" cy="128" r="4.5" fill="var(--kid-accent-2)"/>
-<!-- end: Seattle, tiny Space Needle + trees + heart -->
-<g transform="translate(712 114)">
-<circle r="4.5" fill="var(--kid-accent-2)"/>
-<g fill="none" stroke="var(--kid-ink-soft)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-<path d="M22 4 L 25 -26 M30 4 L 27 -26"/>
-<path d="M17 -30 C 20 -34, 32 -34, 35 -30 C 32 -27, 20 -27, 17 -30 Z"/>
-<path d="M26 -34 L 26 -42"/>
+<path class="fm-route" d="M76.8 176.8 Q 340 -30 640.3 76.8"/>
+<!-- clouds -->
+<g fill="var(--kid-accent-3)" opacity=".12">
+<path d="M232 70 a10 10 0 0 1 18 -6 a12 12 0 0 1 22 4 a8 8 0 0 1 2 14 h-40 a8 8 0 0 1 -2 -12 z"/>
+<path d="M548 92 a8 8 0 0 1 14 -5 a10 10 0 0 1 18 3 a7 7 0 0 1 1 11 h-32 a6 6 0 0 1 -1 -9 z"/>
 </g>
-<path d="M44 4 L 50 -14 L 56 4 Z M36 4 L 41 -9 L 46 4 Z" fill="var(--kid-accent)" opacity=".7"/>
-<path d="M-6 -22 c -3 -4 -9 -2 -7 3 l 7 6 l 7 -6 c 2 -5 -4 -7 -7 -3 z" fill="var(--kid-accent-2)" opacity=".85"/>
-</g>
-<!-- airplane, heading east along the route -->
-<g transform="translate(519 46) rotate(10)">
-<g transform="scale(1.15)">
+<!-- pins -->
+<circle cx="76.8" cy="176.8" r="9" fill="var(--kid-accent-2)" opacity=".2"/>
+<circle cx="76.8" cy="176.8" r="4.5" fill="var(--kid-accent-2)"/>
+<circle cx="640.3" cy="76.8" r="9" fill="var(--kid-accent-2)" opacity=".2"/>
+<circle cx="640.3" cy="76.8" r="4.5" fill="var(--kid-accent-2)"/>
+<path transform="translate(654.3 64.8)" d="M0 -3 c -3 -4 -9 -2 -7 3 l 7 6 l 7 -6 c 2 -5 -4 -7 -7 -3 z" fill="var(--kid-accent-2)" opacity=".85"/>
+<!-- airplane -->
+<g transform="translate(463.5 40.9) rotate(2.5) scale(1.15)">
 <path d="M-15 0 C -15 -3.2, -12 -4, -9 -4 L 12 -4 C 17 -4, 20 -2, 20 0 C 20 2, 17 4, 12 4 L -9 4 C -12 4, -15 3.2, -15 0 Z" fill="#FFFFFF" stroke="var(--kid-accent-3)" stroke-width="1.6"/>
 <path d="M2 -4 L -6 -15 L -1 -15 L 9 -4 Z M2 4 L -6 15 L -1 15 L 9 4 Z" fill="var(--kid-accent-3)"/>
 <path d="M-13 -3 L -17 -10 L -13 -10 L -9 -4 Z" fill="var(--kid-accent-3)"/>
-<circle cx="13" cy="-0.5" r="1.4" fill="var(--kid-accent-3)"/>
-<circle cx="8" cy="-0.5" r="1.4" fill="var(--kid-accent-3)"/>
-<circle cx="3" cy="-0.5" r="1.4" fill="var(--kid-accent-3)"/>
-</g>
-</g>
-<!-- puffy clouds -->
-<g fill="var(--kid-accent-3)" opacity=".12">
-<path d="M232 64 a10 10 0 0 1 18 -6 a12 12 0 0 1 22 4 a8 8 0 0 1 2 14 h-40 a8 8 0 0 1 -2 -12 z"/>
-<path d="M590 100 a8 8 0 0 1 14 -5 a10 10 0 0 1 18 3 a7 7 0 0 1 1 11 h-32 a6 6 0 0 1 -1 -9 z"/>
+<circle cx="13" cy="-0.5" r="1.4" fill="var(--kid-accent-3)"/><circle cx="8" cy="-0.5" r="1.4" fill="var(--kid-accent-3)"/><circle cx="3" cy="-0.5" r="1.4" fill="var(--kid-accent-3)"/>
 </g>
 <!-- labels -->
-<text class="fm-miles" x="411" y="72" text-anchor="middle">about 5,300 miles</text>
-<text class="fm-name" x="110" y="160" text-anchor="middle">Jindo Island</text>
-<text class="fm-label" x="110" y="178" text-anchor="middle">South Korea</text>
-<text class="fm-name" x="718" y="160" text-anchor="middle">Seattle</text>
-<text class="fm-label" x="718" y="178" text-anchor="middle">where she landed</text>
+<text class="fm-country" x="100" y="132" text-anchor="middle">SOUTH</text>
+<text class="fm-country" x="100" y="144" text-anchor="middle">KOREA</text>
+<text class="fm-country" x="715.7" y="111.4" text-anchor="middle">USA</text>
+<text class="fm-miles" x="319" y="78" text-anchor="middle">about 5,300 miles</text>
+<text class="fm-name" x="14" y="204" text-anchor="start">Jindo Island</text>
+<text class="fm-label" x="14" y="220" text-anchor="start">where she started</text>
+<text class="fm-name" x="628.3" y="56.8" text-anchor="end">Seattle</text>
+<text class="fm-label" x="628.3" y="71.8" text-anchor="end">where she landed</text>
 </svg>
 <img src="assets/echo-real.jpg" width="900" height="900" loading="lazy" alt="Echo, a white Korean Jindo with tall ears and a curled tail, standing in the woods in her teal collar">
 <figcaption>The real Echo, out on the trail.</figcaption>
@@ -670,6 +668,20 @@ footer{padding-inline:20px;}
 <div class="breed-sub">Helix's breed</div>
 </div>
 </div>
+<svg class="breed-map" viewBox="232 0 470 240" role="img" aria-labelledby="bm-title">
+<title id="bm-title">Map doodle of Mexico with the state of Chihuahua highlighted, where the Chihuahua breed comes from</title>
+<text class="fm-sea" x="292" y="159" text-anchor="middle">Pacific Ocean</text>
+<text class="fm-sea" x="538" y="108" text-anchor="middle">Gulf of Mexico</text>
+<path class="fm-land" d="M254.8 20.8 L282.4 20.8 L328.0 35.2 L361.6 35.2 L361.6 29.2 L382.0 29.2 L406.0 54.4 L424.0 62.8 L442.0 53.2 L466.0 80.8 L491.2 98.8 L493.6 110.8 L486.4 140.8 L493.6 163.6 L504.4 179.2 L520.0 187.6 L526.0 192.4 L556.0 187.6 L568.0 180.4 L575.2 158.8 L604.0 152.8 L618.4 156.4 L610.0 182.8 L600.4 188.8 L592.0 197.2 L568.0 197.2 L563.2 218.8 L553.6 236.8 L538.0 221.2 L508.0 222.4 L484.0 216.4 L448.0 203.2 L418.0 191.2 L396.4 166.0 L392.8 149.2 L377.2 128.8 L352.0 104.8 L347.2 89.2 L332.8 76.0 L313.6 59.2 L302.8 36.4 L282.4 32.8 L284.8 50.8 L301.6 72.4 L316.0 92.8 L336.4 120.4 L347.2 132.4 L336.4 127.6 L314.8 114.4 L312.4 95.2 L289.6 78.4 L286.0 64.0 L271.6 47.2 L259.6 31.6 Z"/>
+<path class="fm-state" d="M361.6 29.2 L382.0 29.2 L406.0 54.4 L424.0 62.8 L418.0 74.8 L412.0 86.8 L400.0 91.6 L382.0 103.6 L372.4 95.2 L358.0 86.8 L352.0 72.4 L356.8 59.2 L352.0 43.6 L361.6 35.2 Z"/>
+<text class="fm-country" x="445.6" y="139.6" text-anchor="middle">MEXICO</text>
+<circle cx="384.4" cy="66.4" r="10" fill="var(--kid-accent-2)" opacity=".22"/>
+<circle cx="384.4" cy="66.4" r="5" fill="var(--kid-accent-2)"/>
+<path class="fm-leader" d="M392.4 60.4 C 424.4 36.4, 454.4 32.4, 480.4 32.4"/>
+<text class="fm-name" x="486.4" y="30.4">Chihuahua</text>
+<text class="fm-label" x="486.4" y="46.4">where the breed comes from</text>
+<g fill="var(--kid-accent-2)" opacity="0.25" transform="translate(430 150) rotate(60)"><ellipse cx="0" cy="2" rx="3.4" ry="2.8"/><circle cx="-3.6" cy="-2.6" r="1.4"/><circle cx="-1.2" cy="-4.4" r="1.4"/><circle cx="1.6" cy="-4.2" r="1.4"/><circle cx="3.8" cy="-2.2" r="1.4"/></g><g fill="var(--kid-accent-2)" opacity="0.35" transform="translate(452 160) rotate(70)"><ellipse cx="0" cy="2" rx="3.4" ry="2.8"/><circle cx="-3.6" cy="-2.6" r="1.4"/><circle cx="-1.2" cy="-4.4" r="1.4"/><circle cx="1.6" cy="-4.2" r="1.4"/><circle cx="3.8" cy="-2.2" r="1.4"/></g><g fill="var(--kid-accent-2)" opacity="0.45" transform="translate(474 166) rotate(80)"><ellipse cx="0" cy="2" rx="3.4" ry="2.8"/><circle cx="-3.6" cy="-2.6" r="1.4"/><circle cx="-1.2" cy="-4.4" r="1.4"/><circle cx="1.6" cy="-4.2" r="1.4"/><circle cx="3.8" cy="-2.2" r="1.4"/></g>
+</svg>
 <div class="fact-grid">
 <div class="fact-item"><span class="fact-dot"></span><p><strong>Ancient breed:</strong> Chihuahuas are one of the oldest breeds in the Americas, with roots going back to ancient Mexico.</p></div>
 <div class="fact-item"><span class="fact-dot"></span><p><strong>National symbol:</strong> The Chihuahua is considered a national symbol of Mexico, named after the Mexican state of Chihuahua.</p></div>
