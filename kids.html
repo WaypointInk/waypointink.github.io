@@ -309,6 +309,27 @@ text-transform:uppercase;
 color:var(--kid-ink-soft);
 margin-top:2px;
 }
+.breed-card .breed-photo{
+margin:0 0 22px;
+}
+.breed-card .breed-photo img{
+display:block;
+width:100%;
+max-width:420px;
+aspect-ratio:1/1;
+object-fit:cover;
+object-position:center;
+margin:0 auto;
+border-radius:14px;
+border:1px solid var(--kid-line);
+}
+.breed-card .breed-photo figcaption{
+text-align:center;
+margin-top:10px;
+font-size:.85rem;
+font-style:italic;
+color:var(--kid-ink-soft);
+}
 .fact-grid{
 display:grid;
 grid-template-columns:repeat(2, 1fr);
@@ -561,6 +582,10 @@ footer{padding-inline:20px;}
 <div class="breed-sub">Echo's breed</div>
 </div>
 </div>
+<figure class="breed-photo">
+<img src="assets/echo-real.jpg" width="900" height="900" loading="lazy" alt="Echo, a white Korean Jindo with tall ears and a curled tail, standing in the woods in her teal collar">
+<figcaption>The real Echo, out on the trail.</figcaption>
+</figure>
 <div class="fact-grid">
 <div class="fact-item"><span class="fact-dot"></span><p><strong>Where they're from:</strong> Jindos are named for Jindo Island, off the coast of South Korea, where the breed has lived for centuries.</p></div>
 <div class="fact-item"><span class="fact-dot"></span><p><strong>Size:</strong> Jindos are medium-sized dogs — usually 18 to 22 inches tall and 35 to 60 pounds full grown.</p></div>
