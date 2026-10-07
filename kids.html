@@ -331,6 +331,24 @@ font-size:.85rem;
 font-style:italic;
 color:var(--kid-ink-soft);
 }
+.breed-card .flight-map{
+display:block;
+width:100%;
+max-width:820px;
+height:auto;
+margin:0 auto 6px;
+position:relative;
+z-index:0;
+pointer-events:none;
+}
+@media (min-width:900px){ .breed-card .flight-map{margin-bottom:-72px;} }
+.breed-card .breed-photo img{position:relative; z-index:1;}
+.flight-map .fm-route{fill:none; stroke:var(--kid-accent-3); stroke-width:2.4; stroke-linecap:round; stroke-dasharray:0.1 9; opacity:.75;}
+.flight-map .fm-land{fill:var(--kid-accent); opacity:.16;}
+.flight-map .fm-label{font-family:var(--mono); font-size:11.5px; letter-spacing:.06em; text-transform:uppercase; fill:var(--kid-ink-soft);}
+.flight-map .fm-name{font-family:'Baloo 2', sans-serif; font-weight:700; font-size:15px; fill:var(--kid-ink);}
+.flight-map .fm-miles{font-family:'Baloo 2', sans-serif; font-weight:700; font-size:15px; fill:var(--kid-accent-3);}
+@media (max-width:600px){ .flight-map .fm-name{font-size:28px;} .flight-map .fm-label{font-size:17px; letter-spacing:0;} .flight-map .fm-miles{font-size:24px; transform:translate(-40px,18px);} }
 .fact-grid{
 display:grid;
 grid-template-columns:repeat(2, 1fr);
@@ -584,6 +602,52 @@ footer{padding-inline:20px;}
 </div>
 </div>
 <figure class="breed-photo">
+<svg class="flight-map" viewBox="0 0 820 200" role="img" aria-labelledby="fm-title">
+<title id="fm-title">Map doodle: a little airplane flying along a dotted line from Jindo Island, South Korea to Seattle, Washington, about 5,300 miles</title>
+<!-- Korea -->
+<path class="fm-land" transform="translate(26 0)" d="M58 62 C 70 52, 88 56, 92 68 C 98 82, 104 92, 102 106 C 100 118, 92 124, 80 122 C 68 120, 60 112, 62 100 C 64 90, 54 80, 58 62 Z"/>
+<ellipse class="fm-land" cx="110" cy="132" rx="7" ry="4"/>
+<!-- Seattle / PNW -->
+<path class="fm-land" transform="translate(146 0)" d="M534 70 C 556 60, 596 58, 612 66 C 626 74, 628 118, 612 128 C 596 134, 574 132, 552 126 C 540 122, 530 110, 534 96 C 536 88, 528 78, 534 70 Z"/>
+<!-- route -->
+<path class="fm-route" d="M110 128 Q 411 -40 712 114"/>
+<!-- start pin: Jindo -->
+<circle cx="110" cy="128" r="9" fill="var(--kid-accent-2)" opacity=".18"/>
+<circle cx="110" cy="128" r="4.5" fill="var(--kid-accent-2)"/>
+<!-- end: Seattle, tiny Space Needle + trees + heart -->
+<g transform="translate(712 114)">
+<circle r="4.5" fill="var(--kid-accent-2)"/>
+<g fill="none" stroke="var(--kid-ink-soft)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+<path d="M22 4 L 25 -26 M30 4 L 27 -26"/>
+<path d="M17 -30 C 20 -34, 32 -34, 35 -30 C 32 -27, 20 -27, 17 -30 Z"/>
+<path d="M26 -34 L 26 -42"/>
+</g>
+<path d="M44 4 L 50 -14 L 56 4 Z M36 4 L 41 -9 L 46 4 Z" fill="var(--kid-accent)" opacity=".7"/>
+<path d="M-6 -22 c -3 -4 -9 -2 -7 3 l 7 6 l 7 -6 c 2 -5 -4 -7 -7 -3 z" fill="var(--kid-accent-2)" opacity=".85"/>
+</g>
+<!-- airplane, heading east along the route -->
+<g transform="translate(519 46) rotate(10)">
+<g transform="scale(1.15)">
+<path d="M-15 0 C -15 -3.2, -12 -4, -9 -4 L 12 -4 C 17 -4, 20 -2, 20 0 C 20 2, 17 4, 12 4 L -9 4 C -12 4, -15 3.2, -15 0 Z" fill="#FFFFFF" stroke="var(--kid-accent-3)" stroke-width="1.6"/>
+<path d="M2 -4 L -6 -15 L -1 -15 L 9 -4 Z M2 4 L -6 15 L -1 15 L 9 4 Z" fill="var(--kid-accent-3)"/>
+<path d="M-13 -3 L -17 -10 L -13 -10 L -9 -4 Z" fill="var(--kid-accent-3)"/>
+<circle cx="13" cy="-0.5" r="1.4" fill="var(--kid-accent-3)"/>
+<circle cx="8" cy="-0.5" r="1.4" fill="var(--kid-accent-3)"/>
+<circle cx="3" cy="-0.5" r="1.4" fill="var(--kid-accent-3)"/>
+</g>
+</g>
+<!-- puffy clouds -->
+<g fill="var(--kid-accent-3)" opacity=".12">
+<path d="M232 64 a10 10 0 0 1 18 -6 a12 12 0 0 1 22 4 a8 8 0 0 1 2 14 h-40 a8 8 0 0 1 -2 -12 z"/>
+<path d="M590 100 a8 8 0 0 1 14 -5 a10 10 0 0 1 18 3 a7 7 0 0 1 1 11 h-32 a6 6 0 0 1 -1 -9 z"/>
+</g>
+<!-- labels -->
+<text class="fm-miles" x="411" y="72" text-anchor="middle">about 5,300 miles</text>
+<text class="fm-name" x="110" y="160" text-anchor="middle">Jindo Island</text>
+<text class="fm-label" x="110" y="178" text-anchor="middle">South Korea</text>
+<text class="fm-name" x="718" y="160" text-anchor="middle">Seattle</text>
+<text class="fm-label" x="718" y="178" text-anchor="middle">where she landed</text>
+</svg>
 <img src="assets/echo-real.jpg" width="900" height="900" loading="lazy" alt="Echo, a white Korean Jindo with tall ears and a curled tail, standing in the woods in her teal collar">
 <figcaption>The real Echo, out on the trail.</figcaption>
 </figure>
