@@ -543,9 +543,53 @@ footer{padding-inline:20px;}
 .join-band.jb-kids{--jb-accent:#C9694C; --jb-ink:var(--kid-ink); --jb-field:#FFFFFF; --jb-line:var(--kid-line); --jb-heart:var(--kid-accent); --jb-ok:#2F6B3F; background:color-mix(in srgb, var(--kid-accent-3) 8%, var(--kid-bg-raised)); border:1px solid color-mix(in srgb, var(--kid-accent-3) 25%, var(--kid-line)); color:var(--kid-ink);}
 .join-band.jb-kids h2{font-family:'Baloo 2', sans-serif; font-weight:700; font-size:1.7rem;}
 .join-band.jb-kids p{color:var(--kid-ink-soft);}
+body{position:relative;}
+.sky{position:absolute; inset:0; z-index:-1; overflow:hidden; pointer-events:none;}
+.sky .cloud{position:absolute; height:auto; animation:cloud-bob 9s ease-in-out infinite;}
+.sky .cloud.r{animation-delay:-4s;}
+.sky .cloud.flip{transform:scaleX(-1);}
+.sky .cloud.flip{animation-name:cloud-bob-flip;}
+@keyframes cloud-bob{0%,100%{translate:0 0;} 50%{translate:0 -8px;}}
+@keyframes cloud-bob-flip{0%,100%{translate:0 0;} 50%{translate:0 -8px;}}
+.sky .cl-puff{fill:#FFFFFF; fill-opacity:.9; stroke:var(--kid-accent-3); stroke-opacity:.45; stroke-width:2.2; stroke-linejoin:round; stroke-linecap:round;}
+.sky .cl-curl{fill:none; stroke:var(--kid-accent-3); stroke-opacity:.4; stroke-width:2; stroke-linecap:round;}
+.sky .moon{position:absolute; top:86px; right:max(20px, calc(50% - 560px)); width:120px; height:auto;}
+.sky .moon .mn-body{fill:#F6DF97; stroke:#E2BC5C; stroke-width:2; stroke-linejoin:round;}
+.sky .moon .mn-star{fill:#E8C66A;}
+.sky .moon .mn-shine{fill:none; stroke:#FFF6D8; stroke-width:3; stroke-linecap:round; opacity:.9;}
+@media (max-width:1180px){ .sky .cloud{display:none;} }
+@media (max-width:700px){ .sky .moon{width:58px; top:152px; right:10px; opacity:.85;} }
+@media (prefers-reduced-motion:reduce){ .sky .cloud{animation:none;} }
 </style>
 </head>
 <body>
+<div class="sky" aria-hidden="true">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="swirl-cloud" viewBox="0 0 200 110">
+<path class="cl-puff" d="M34 96 C 12 96, 6 70, 26 62 C 20 40, 46 28, 62 40 C 68 16, 104 10, 114 34 C 128 18, 156 24, 154 48 C 176 42, 194 60, 182 78 C 196 86, 186 100, 168 98 Z"/>
+<path class="cl-curl" d="M72 60 c -9 0 -13 -9 -7 -14 c 5 -4 12 0 10 6 c -1 3 -5 4 -7 2"/>
+<path class="cl-curl" d="M122 54 c -11 1 -17 -10 -10 -17 c 7 -6 17 0 14 8 c -2 4 -7 5 -9 2"/>
+<path class="cl-curl" d="M162 72 c -8 1 -12 -7 -7 -12 c 4 -4 10 -1 9 4 c -1 3 -4 3 -6 1"/>
+<path class="cl-curl" d="M36 84 c 12 6 28 4 34 -4 c 4 -6 -3 -11 -8 -7 c -3 3 -1 7 3 6"/>
+<path class="cl-curl" d="M96 90 c 14 4 30 2 40 -4"/>
+</symbol></defs></svg>
+<svg class="moon" viewBox="0 0 140 130">
+<path class="mn-body" d="M78 14 C 46 18, 26 46, 32 78 C 38 108, 70 124, 100 114 C 108 111, 115 106, 120 100 C 92 106, 66 88, 62 60 C 59 40, 66 24, 78 14 Z"/>
+<path class="mn-shine" d="M48 58 C 48 46, 53 36, 60 30"/>
+<path class="mn-star" d="M112 26 l 3 9 l 9 3 l -9 3 l -3 9 l -3 -9 l -9 -3 l 9 -3 z"/>
+<path class="mn-star" d="M18 30 l 2 6 l 6 2 l -6 2 l -2 6 l -2 -6 l -6 -2 l 6 -2 z" opacity=".8"/>
+<circle class="mn-star" cx="128" cy="62" r="2.5"/>
+<circle class="mn-star" cx="96" cy="8" r="2"/>
+</svg>
+<svg class="cloud l" viewBox="0 0 200 110" style="top:260px; left:max(-30px, calc(50% - 480px - 250px)); width:210px"><use href="#swirl-cloud"/></svg>
+<svg class="cloud r flip" viewBox="0 0 200 110" style="top:560px; right:max(-30px, calc(50% - 480px - 210px)); width:170px"><use href="#swirl-cloud"/></svg>
+<svg class="cloud l flip" viewBox="0 0 200 110" style="top:1180px; left:max(-30px, calc(50% - 480px - 200px)); width:160px"><use href="#swirl-cloud"/></svg>
+<svg class="cloud r" viewBox="0 0 200 110" style="top:1500px; right:max(-30px, calc(50% - 480px - 260px)); width:220px"><use href="#swirl-cloud"/></svg>
+<svg class="cloud l" viewBox="0 0 200 110" style="top:2150px; left:max(-30px, calc(50% - 480px - 240px)); width:200px"><use href="#swirl-cloud"/></svg>
+<svg class="cloud r flip" viewBox="0 0 200 110" style="top:2500px; right:max(-30px, calc(50% - 480px - 200px)); width:160px"><use href="#swirl-cloud"/></svg>
+<svg class="cloud l flip" viewBox="0 0 200 110" style="top:3150px; left:max(-30px, calc(50% - 480px - 210px)); width:170px"><use href="#swirl-cloud"/></svg>
+<svg class="cloud r" viewBox="0 0 200 110" style="top:3500px; right:max(-30px, calc(50% - 480px - 240px)); width:200px"><use href="#swirl-cloud"/></svg>
+</div>
 
 
 <header class="site-header"><div class="sh-inner"><a class="sh-brand" href="index.html">Waypoint Ink</a><nav aria-label="Main"><a href="fiction.html">Fiction</a><a href="kids.html" aria-current="page">Children's Books</a><a class="sh-cta" href="https://www.amazon.com/gp/product/B0HG76LPZM" target="_blank" rel="noopener">Buy Echo’s ABC</a></nav></div></header>
