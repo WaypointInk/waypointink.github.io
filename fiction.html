@@ -142,6 +142,9 @@ background:linear-gradient(100deg, var(--fic-ink) 45%, #C77A70 85%);
 background-clip:text;
 color:transparent;
 }
+.fiction .fic-intro{text-align:center;}
+.fiction .fic-intro .lede{margin-inline:auto;}
+.fiction .fic-intro .eyebrow::after{content:""; width:22px; height:1px; background:var(--fic-accent); display:inline-block;}
 .fiction .lede{
 color:var(--fic-ink-soft);
 max-width:58ch;
@@ -407,9 +410,11 @@ footer{padding-inline:20px;}
 
 <section class="fiction" id="fiction">
 <div class="wrap">
+<div class="fic-intro">
 <span class="eyebrow">The fiction of J.R. Deem</span>
 <h2 class="section-title">Somber, strange, and quietly certain something is real.</h2>
 <p class="lede">J.R. Deem writes slipstream fiction and YA/NA fantasy about people tethered to each other in ways that outlast memory, geography, and sometimes death. Currently in progress: three long-form works, side by side.</p>
+</div>
 
 <div class="books">
 
