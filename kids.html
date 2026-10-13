@@ -556,13 +556,17 @@ body{position:relative;}
 @keyframes cloud-bob-flip{0%,100%{translate:0 0;} 50%{translate:0 -8px;}}
 .sky .cl-puff{fill:#FFFFFF; fill-opacity:.9; stroke:var(--kid-accent-3); stroke-opacity:.45; stroke-width:2.2; stroke-linejoin:round; stroke-linecap:round;}
 .sky .cl-curl{fill:none; stroke:var(--kid-accent-3); stroke-opacity:.4; stroke-width:2; stroke-linecap:round;}
+.sky .stars{position:absolute; top:78px; left:max(20px, calc(50% - 560px)); width:130px; height:auto; overflow:visible;}
+.sky .stars .tw{fill:#E8C66A; transform-box:fill-box; transform-origin:center; animation:twinkle 3.2s ease-in-out infinite;}
+.sky .stars .tw.d2{animation-delay:-1.1s;} .sky .stars .tw.d3{animation-delay:-2.2s;} .sky .stars .tw.d4{animation-delay:-.6s;} .sky .stars .tw.d5{animation-delay:-1.7s;}
+@keyframes twinkle{0%,100%{opacity:1; transform:scale(1);} 50%{opacity:.35; transform:scale(.72);}}
 .sky .moon{position:absolute; top:86px; right:max(20px, calc(50% - 560px)); width:120px; height:auto; transform:scaleX(-1);}
 .sky .moon .mn-body{fill:#F6DF97; stroke:#E2BC5C; stroke-width:2; stroke-linejoin:round;}
 .sky .moon .mn-star{fill:#E8C66A;}
 .sky .moon .mn-shine{fill:none; stroke:#FFF6D8; stroke-width:3; stroke-linecap:round; opacity:.9;}
 @media (max-width:1180px){ .sky .cloud{display:none;} }
-@media (max-width:700px){ .sky .moon{width:58px; top:152px; right:10px; opacity:.85;} }
-@media (prefers-reduced-motion:reduce){ .sky .cloud{animation:none;} }
+@media (max-width:700px){ .sky .moon{width:58px; top:152px; right:10px; opacity:.85;} .sky .stars{width:62px; top:150px; left:10px; opacity:.85;} }
+@media (prefers-reduced-motion:reduce){ .sky .cloud, .sky .stars .tw{animation:none;} }
 </style>
 </head>
 <body>
@@ -576,6 +580,16 @@ body{position:relative;}
 <path class="cl-curl" fill="none" stroke="#4A7C9E" stroke-opacity="0.4" stroke-width="2" stroke-linecap="round" d="M36 84 c 12 6 28 4 34 -4 c 4 -6 -3 -11 -8 -7 c -3 3 -1 7 3 6"/>
 <path class="cl-curl" fill="none" stroke="#4A7C9E" stroke-opacity="0.4" stroke-width="2" stroke-linecap="round" d="M96 90 c 14 4 30 2 40 -4"/>
 </symbol></defs></svg>
+<svg class="stars" viewBox="0 0 140 130">
+<path class="tw" d="M40 30 l 4 12 l 12 4 l -12 4 l -4 12 l -4 -12 l -12 -4 l 12 -4 z"/>
+<path class="tw d2" d="M100 22 l 2.5 7.5 l 7.5 2.5 l -7.5 2.5 l -2.5 7.5 l -2.5 -7.5 l -7.5 -2.5 l 7.5 -2.5 z"/>
+<path class="tw d3" d="M86 86 l 3 9 l 9 3 l -9 3 l -3 9 l -3 -9 l -9 -3 l 9 -3 z"/>
+<path class="tw d4" d="M22 96 l 2 6 l 6 2 l -6 2 l -2 6 l -2 -6 l -6 -2 l 6 -2 z"/>
+<circle class="tw d5" cx="124" cy="60" r="2.5"/>
+<circle class="tw d2" cx="62" cy="8" r="2"/>
+<circle class="tw d4" cx="58" cy="76" r="1.8"/>
+<circle class="tw d3" cx="8" cy="52" r="2"/>
+</svg>
 <svg class="moon" viewBox="0 0 140 130">
 <path class="mn-body" d="M78 14 C 46 18, 26 46, 32 78 C 38 108, 70 124, 100 114 C 108 111, 115 106, 120 100 C 92 106, 66 88, 62 60 C 59 40, 66 24, 78 14 Z"/>
 <path class="mn-shine" d="M48 58 C 48 46, 53 36, 60 30"/>
@@ -658,9 +672,10 @@ body{position:relative;}
 <div class="promo-copy">
 <span class="eyebrow">Echo's Books · Book 2</span>
 <span class="badge">Work in progress</span>
-<h3>Echo Goes to the Vet</h3>
+<h3><a href="books/echo-goes-to-the-vet.html" style="color:inherit; text-decoration:none;">Echo Goes to the Vet</a></h3>
 <p>Echo's next adventure follows her from the couch to the vet's office — a gentle, reassuring story for kids who get nervous about check-ups, built from the same real-life trips that inspired the series.</p>
-<p class="promo-byline">Coming this fall to Amazon &amp; Kindle · by Jessica Sellars</p>
+<p class="promo-byline">Coming around Thanksgiving to Amazon &amp; Kindle · by Jessica Sellars</p>
+<p style="margin-top:12px;"><a href="books/echo-goes-to-the-vet.html" style="color:var(--kid-accent-2); font-family:var(--mono); font-size:.8rem; letter-spacing:.12em; text-transform:uppercase; text-decoration:none;">See the book →</a></p>
 </div>
 <div class="promo-art">
 <img src="assets/vet-storyboard.png" alt="Original storyboard sketch of Echo and her owner on the couch, from Echo Goes to the Vet">
