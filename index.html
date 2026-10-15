@@ -358,10 +358,11 @@ footer .fine{
 .buy-btn svg{width:14px; height:14px;}
 @media (prefers-reduced-motion: reduce){ .buy-btn{transition:none;} }
 .site-header{--sh-ink:#F3F1EA; --sh-ink-soft:#9EA1A6; --sh-accent:#D7B79E; --sh-cta-ink:#14161B; --sh-line:#2B2E35; position:absolute; top:0; left:0; right:0; border-bottom:0;}
-.now-available{display:flex; align-items:center; justify-content:center; gap:14px 18px; flex-wrap:wrap; margin:36px auto 0; padding:14px 18px 14px 22px; max-width:780px; border:1px solid var(--hub-hero-line); border-radius:999px; background:color-mix(in srgb, #fff 4%, transparent); text-align:left;}
+.now-available{display:flex; align-items:center; justify-content:center; gap:14px 18px; flex-wrap:wrap; margin:36px auto 0; padding:14px 18px 14px 22px; max-width:1000px; border:1px solid var(--hub-hero-line); border-radius:999px; background:color-mix(in srgb, #fff 4%, transparent); text-align:left;}
 .now-available .na-label{font-family:var(--mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:#D7B79E;}
 .now-available .na-text{color:var(--hub-hero-ink); font-size:.98rem;}
 .now-available .buy-btn{margin-top:0;}
+.now-available .buy-btn.buy-hc{background:transparent; color:#F1E7DA !important; box-shadow:inset 0 0 0 1.5px rgba(241,231,218,.55);}
 @media (max-width:620px){ .now-available{border-radius:16px; flex-direction:column; text-align:center; padding:18px;} }
 .hub{padding-top:140px;}
 .logo-mark{display:block; margin:0 auto 6px;}
@@ -500,7 +501,7 @@ footer{padding-inline:20px;}
 <h1>Stories in more than one direction.</h1>
 <p class="tagline">Slipstream and YA fantasy for grown-up readers, and picture books rooted in the Pacific Northwest for the smallest ones. Pick a trail.</p>
 
-<div class="now-available"><span class="na-label">Now available</span><span class="na-text"><strong>Echo’s ABC</strong> by Jessica Sellars, in paperback and Kindle</span><span class="btn-halo"><svg class="ink-loop" viewBox="0 0 220 80" preserveAspectRatio="none" aria-hidden="true"><path d="M34 16 C 78 4, 168 3, 204 20 C 221 29, 216 56, 176 67 C 128 79, 54 78, 22 64 C 5 56, 6 34, 36 19 C 58 9, 92 6, 118 8"/><path class="spark" d="M212 8 l4 -6 M218 14 l7 -2 M206 5 l-1 -6"/></svg><a class="buy-btn" href="https://www.amazon.com/gp/product/B0HG76LPZM" target="_blank" rel="noopener">Buy on Amazon <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></span></div>
+<div class="now-available"><span class="na-label">Now available</span><span class="na-text"><strong>Echo’s ABC</strong> by Jessica Sellars, now in hardcover</span><span class="btn-halo"><svg class="ink-loop" viewBox="0 0 220 80" preserveAspectRatio="none" aria-hidden="true"><path d="M34 16 C 78 4, 168 3, 204 20 C 221 29, 216 56, 176 67 C 128 79, 54 78, 22 64 C 5 56, 6 34, 36 19 C 58 9, 92 6, 118 8"/><path class="spark" d="M212 8 l4 -6 M218 14 l7 -2 M206 5 l-1 -6"/></svg><a class="buy-btn" href="https://www.amazon.com/gp/product/B0HG76LPZM" target="_blank" rel="noopener">Buy on Amazon <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></span><a class="buy-btn buy-hc" href="https://www.barnesandnoble.com/w/echos-abc-jessica-sellars/1151678187?ean=9798179063629" target="_blank" rel="noopener">Hardcover at B&amp;N <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></div>
 <svg class="trail-fork" viewBox="0 0 720 74" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
 <path class="trail" d="M360 2 C 358 14, 363 22, 360 30"/>
 <path class="trail branch" d="M354 36 C 300 44, 250 38, 196 50 C 176 55, 180 64, 178 72"/>
