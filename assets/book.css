@@ -38,6 +38,8 @@ body.fic .hero::before{content:""; position:absolute; inset:-20% -10% auto auto;
 .hero-grid{display:grid; grid-template-columns:minmax(0,5fr) minmax(0,7fr); gap:56px; align-items:center; position:relative;}
 @media (max-width:820px){ .hero-grid{grid-template-columns:1fr; gap:36px;} }
 .cover{position:relative; border-radius:6px 14px 14px 6px; overflow:hidden; box-shadow:0 30px 60px -28px rgba(0,0,0,.6), 0 2px 0 rgba(255,255,255,.04) inset; aspect-ratio:2/3; max-width:380px; width:100%; margin-inline:auto; background:var(--raised);}
+.art-drop{margin:0 0 14px; padding:10px 14px; border-radius:10px; font-size:.92rem; line-height:1.5; color:var(--ink); background:color-mix(in srgb, var(--accent, #6FA3C4) 16%, transparent); border:1px solid color-mix(in srgb, var(--accent, #6FA3C4) 45%, transparent); text-align:center;}
+.art-drop strong{color:var(--accent, #6FA3C4);}
 .cover-note{max-width:380px; margin:14px auto 0; font-size:.85rem; line-height:1.5; font-style:italic; color:var(--ink-soft); text-align:center;}
 .cover-note a{color:inherit; text-decoration:underline; text-underline-offset:3px;}
 .cover.wide{aspect-ratio:3/2; max-width:none; border-radius:12px;}
