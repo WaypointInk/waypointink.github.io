@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Start Writing Your Novel · Waypoint Ink</title>
+<meta name="description" content="Want to write a novel? Plan yours step by step, free: premise, characters, setting, a chapter story board, and a daily word goal. Print or save your plan when you're done.">
+<link rel="canonical" href="https://waypointink.com/write.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Waypoint Ink">
+<meta property="og:title" content="Start Writing Your Novel · Waypoint Ink">
+<meta property="og:description" content="A free, step-by-step novel planner. Plan your premise, characters, setting and chapters, then print your plan.">
+<meta property="og:url" content="https://waypointink.com/write.html">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#1B1D22">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2314161B'/%3E%3Cpath d='M32 12 L44 40 L32 34 L20 40 Z' fill='%23D7B79E'/%3E%3Ccircle cx='32' cy='50' r='3' fill='%23D7B79E'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Source+Serif+4:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#EDEEEB; --ink:#1B1D22; --soft:#585B57; --accent:#3D5A6C; --rose:#B5544F; --line:#CBCEC7; --card:#FFFFFF; --wash:#E3E7EA;
+  --mono:'IBM Plex Mono', ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){ --bg:#191B1E; --ink:#EDEEEB; --soft:#9A9C97; --line:#31343A; --card:#20232A; --wash:#262A31; --accent:#8FB0C4; --rose:#D98580; }
+}
+:root[data-theme="dark"]{ --bg:#191B1E; --ink:#EDEEEB; --soft:#9A9C97; --line:#31343A; --card:#20232A; --wash:#262A31; --accent:#8FB0C4; --rose:#D98580; }
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Source Serif 4',Georgia,serif;-webkit-font-smoothing:antialiased;line-height:1.55}
+a{color:inherit}
+.wrap{max-width:880px;margin-inline:auto;padding-inline:20px}
+.mono{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase}
+
+/* header (matches site) */
+.site-header{padding:18px 24px;border-bottom:1px solid var(--line)}
+.sh-inner{max-width:1040px;margin-inline:auto;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.sh-brand{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:1.15rem;text-decoration:none}
+.site-header nav{display:flex;gap:22px;flex-wrap:wrap;align-items:center}
+.site-header nav a{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:var(--soft);padding-block:4px;border-bottom:1px solid transparent}
+.site-header nav a:hover,.site-header nav a[aria-current="page"]{color:var(--ink);border-color:var(--accent)}
+@media (max-width:560px){.sh-inner{justify-content:center}.site-header nav{justify-content:center;gap:16px}}
+
+/* hero */
+.hero{padding:64px 0 28px;text-align:center}
+.hero .mono{color:var(--rose)}
+.hero h1{font-family:'Fraunces',Georgia,serif;font-weight:500;font-size:clamp(2.1rem,6vw,3.4rem);line-height:1.08;margin:12px 0 14px;text-wrap:balance}
+.hero h1 em{color:var(--accent)}
+.hero p{max-width:600px;margin:0 auto;color:var(--soft);font-size:1.1rem}
+.hero .note{margin-top:14px;font-size:.9rem}
+
+/* stepper */
+.steps{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin:28px 0 22px;padding:0;list-style:none}
+.steps button{font:inherit;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;background:transparent;color:var(--soft);border:1px solid var(--line);border-radius:999px;padding:8px 13px;cursor:pointer}
+.steps button[aria-current="step"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.steps button.done::before{content:"✓ ";color:var(--rose)}
+.progress{height:3px;background:var(--line);border-radius:3px;overflow:hidden;margin-bottom:22px}
+.progress span{display:block;height:100%;background:var(--rose);width:0;transition:width .35s ease}
+
+.panel{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px clamp(18px,4vw,36px);box-shadow:0 18px 40px -30px rgba(0,0,0,.35)}
+.panel h2{font-family:'Fraunces',Georgia,serif;font-weight:500;font-size:1.7rem;margin:4px 0 6px}
+.panel .lede{color:var(--soft);margin:0 0 20px}
+.tip{background:var(--wash);border-radius:12px;padding:12px 16px;margin:0 0 22px;font-size:.95rem}
+.tip b{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--rose);margin-right:6px;font-weight:500}
+label.f{display:block;margin-bottom:16px}
+label.f span{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+label.f small{display:block;color:var(--soft);font-size:.85rem;margin-top:4px}
+input[type=text],input[type=number],input[type=email],textarea{width:100%;font:inherit;font-size:1rem;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:11px 13px}
+textarea{min-height:84px;resize:vertical}
+input:focus,textarea:focus{outline:2px solid var(--accent);outline-offset:1px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:0 18px}
+@media (max-width:640px){.grid2{grid-template-columns:1fr}}
+.nav-row{display:flex;justify-content:space-between;gap:12px;margin-top:22px;flex-wrap:wrap}
+.btn{font:inherit;font-weight:600;font-size:.97rem;border:0;border-radius:999px;padding:12px 22px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px}
+.btn.primary{background:var(--ink);color:var(--bg)}
+.btn.ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--line)}
+.btn.rose{background:var(--rose);color:#fff}
+.btn:hover{filter:brightness(1.08)}
+
+/* characters & chapters */
+.item{border:1px solid var(--line);border-radius:14px;padding:16px 16px 4px;margin-bottom:14px;position:relative}
+.item .rm{position:absolute;top:10px;right:10px;background:none;border:0;color:var(--soft);cursor:pointer;font-size:1.2rem}
+.board{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:12px}
+.card{border:1px solid var(--line);border-radius:12px;padding:10px 12px;background:var(--bg)}
+.card .top{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1.5px solid var(--rose);padding-bottom:3px;margin-bottom:6px}
+.card .top b{font-family:'Fraunces',serif;font-weight:500;font-style:italic}
+.card .top i{font-style:normal;font-family:var(--mono);font-size:9.5px;color:var(--accent);letter-spacing:.08em;text-transform:uppercase}
+.card textarea{min-height:76px;font-size:.92rem;background:var(--card)}
+.card input{font-size:.92rem;padding:7px 9px;margin-bottom:6px;background:var(--card)}
+.act{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--rose);margin:18px 0 8px;grid-column:1/-1}
+
+/* calculator */
+.calc{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:8px 0 16px}
+@media (max-width:640px){.calc{grid-template-columns:1fr}}
+.stat{background:var(--wash);border-radius:14px;padding:16px;text-align:center}
+.stat b{display:block;font-family:'Fraunces',serif;font-weight:500;font-size:2rem;line-height:1.1}
+.stat span{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--soft)}
+
+/* summary */
+.sum h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin:22px 0 6px;padding-bottom:4px;border-bottom:1px solid var(--line)}
+.sum p,.sum li{white-space:pre-wrap;margin:4px 0}
+.sum .k{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.sum .empty{color:var(--soft);font-style:italic}
+
+/* kit promo */
+.kit{display:grid;grid-template-columns:1fr 1.2fr;gap:28px;align-items:center;margin:48px 0 0;padding:28px;border-radius:18px;background:#1B1D22;color:#F1EFE8}
+.kit .mono{color:#D7B79E}
+.kit h2{font-family:'Fraunces',serif;font-weight:500;font-size:1.8rem;margin:8px 0}
+.kit p{color:#C9C8C2;margin:0 0 16px}
+.kit .mock{aspect-ratio:8.5/11;max-width:240px;margin:auto;background:#22304a;border-radius:6px;box-shadow:18px 18px 0 -6px #EEF2F8,18px 18px 0 -5px #c9d3e2,0 20px 40px -10px rgba(0,0,0,.6);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px;position:relative}
+.kit .mock::before{content:"";position:absolute;inset:10px;border:1px solid #c98b8b;border-radius:6px}
+.kit .mock strong{font-family:'Fraunces',serif;font-style:italic;font-weight:500;font-size:1.6rem;line-height:1.1;color:#fff}
+.kit .mock small{font-family:var(--mono);font-size:8.5px;letter-spacing:.15em;color:#c98b8b;margin-top:10px;text-transform:uppercase}
+@media (max-width:700px){.kit{grid-template-columns:1fr}}
+
+.join{margin:28px 0 0;padding:24px;border:1px solid var(--line);border-radius:18px;text-align:center}
+.join h2{font-family:'Fraunces',serif;font-weight:500;margin:0 0 6px}
+.join p{color:var(--soft);margin:0 0 14px}
+.join .row{display:flex;gap:8px;max-width:440px;margin:auto}
+.join .row input{flex:1}
+.nl-status{min-height:1.2em;font-size:.9rem;margin-top:8px}
+.saved{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--soft);text-align:center;margin-top:12px}
+
+footer{padding:40px 20px 50px;text-align:center;color:var(--soft);font-size:.88rem}
+footer a{margin:0 10px}
+[hidden]{display:none!important}
+
+/* print: only the plan */
+@media print{
+  body{background:#fff;color:#000}
+  .site-header,.hero,.steps,.progress,.nav-row,.kit,.join,footer,.saved,.no-print{display:none!important}
+  section.step{display:none!important}
+  section.step.summary{display:block!important}
+  .panel{border:0;box-shadow:none;padding:0}
+  .sum h3{break-after:avoid}
+}
+</style>
+</head>
+<body>
+<header class="site-header"><div class="sh-inner"><a class="sh-brand" href="index.html">Waypoint Ink</a><nav aria-label="Main"><a href="fiction.html">Fiction</a><a href="kids.html">Children's Books</a><a href="write.html" aria-current="page">Start Writing</a><a href="https://www.etsy.com/shop/WaypointInk" target="_blank" rel="noopener">Shop</a></nav></div></header>
+
+<main class="wrap">
+<section class="hero">
+<div class="mono">Free novel planner</div>
+<h1>Want to write a novel?<br><em>Here's how to start.</em></h1>
+<p>Every book starts as a question you can't stop asking. Answer a few of your own, one step at a time, and leave with a real plan for your story.</p>
+<p class="note mono">Takes 20–40 minutes · saves as you go · print it when you're done</p>
+</section>
+
+<ol class="steps" id="steps"></ol>
+<div class="progress"><span id="bar"></span></div>
+
+<!-- STEP 1 -->
+<section class="step panel" data-title="The Idea">
+<div class="mono" style="color:var(--rose)">Step 1 of 6</div>
+<h2>Find the heart of your story</h2>
+<p class="lede">Don't worry about getting it perfect. You're sketching, not carving. You can change any of this later.</p>
+<div class="tip"><b>Tip</b>A logline is your whole book in one sentence: <em>who</em> wants <em>what</em>, and <em>what's in the way</em>.</div>
+<div class="grid2">
+<label class="f"><span>Working title</span><input type="text" data-k="title" placeholder="It's okay if it's temporary"></label>
+<label class="f"><span>Genre</span><input type="text" data-k="genre" placeholder="Fantasy, mystery, romance, horror…"></label>
+</div>
+<label class="f"><span>Logline</span><textarea data-k="logline" placeholder="When ___ happens, ___ must ___ before ___."></textarea></label>
+<label class="f"><span>What it's about</span><textarea data-k="premise" placeholder="The bigger picture: the world, the problem, what makes it yours."></textarea></label>
+<div class="grid2">
+<label class="f"><span>What's at stake</span><textarea data-k="stakes" placeholder="What happens if they fail?"></textarea></label>
+<label class="f"><span>The ending I'm writing toward</span><textarea data-k="ending" placeholder="You can change it. Knowing it helps you aim."></textarea></label>
+</div>
+<label class="f"><span>The secret only you know</span><textarea data-k="secret" placeholder="The truth under the story, even if readers never fully learn it."></textarea><small>Stays private on this device unless you print it.</small></label>
+</section>
+
+<!-- STEP 2 -->
+<section class="step panel" data-title="Characters">
+<div class="mono" style="color:var(--rose)">Step 2 of 6</div>
+<h2>Meet your people</h2>
+<p class="lede">Start with your main character. Add anyone whose choices change the story.</p>
+<div class="tip"><b>Tip</b>What a character <em>wants</em> drives the plot. What they <em>need</em> (and don't know they need) gives the story its heart.</div>
+<div id="chars"></div>
+<button class="btn ghost" type="button" id="addChar">+ Add a character</button>
+</section>
+
+<!-- STEP 3 -->
+<section class="step panel" data-title="Setting">
+<div class="mono" style="color:var(--rose)">Step 3 of 6</div>
+<h2>Build the world</h2>
+<p class="lede">Specific beats general. One strange, true detail makes a place feel real.</p>
+<div class="grid2">
+<label class="f"><span>Main place</span><input type="text" data-k="place" placeholder="A town, a ship, a kingdom, a kitchen…"></label>
+<label class="f"><span>When</span><input type="text" data-k="when" placeholder="Season, year, era"></label>
+</div>
+<div class="grid2">
+<label class="f"><span>What you'd see, hear, smell</span><textarea data-k="senses"></textarea></label>
+<label class="f"><span>History &amp; legends</span><textarea data-k="history" placeholder="What happened here before your story began?"></textarea></label>
+</div>
+<label class="f"><span>Why this place matters to the story</span><textarea data-k="placewhy"></textarea></label>
+</section>
+
+<!-- STEP 4 -->
+<section class="step panel" data-title="Story Board">
+<div class="mono" style="color:var(--rose)">Step 4 of 6</div>
+<h2>Board the whole story</h2>
+<p class="lede">One or two lines per chapter is plenty. Most first novels land around 20–30 chapters.</p>
+<div class="tip"><b>Tip</b>Roughly: the first quarter sets things up, something big shifts at the middle, everything falls apart near three-quarters, then the climax.</div>
+<label class="f" style="max-width:260px"><span>Number of chapters</span><input type="number" id="chCount" min="5" max="60" value="20"></label>
+<div class="board" id="board"></div>
+</section>
+
+<!-- STEP 5 -->
+<section class="step panel" data-title="Word Goal">
+<div class="mono" style="color:var(--rose)">Step 5 of 6</div>
+<h2>Set your word goal</h2>
+<p class="lede">A finished draft beats a perfect page. Pick a pace you can keep.</p>
+<div class="grid2">
+<label class="f"><span>Target length (words)</span><input type="number" id="wTotal" data-k="wtotal" min="1000" step="1000" placeholder="60000"><small>Short novel 50–70k · typical 70–90k · epic fantasy 100k+</small></label>
+<label class="f"><span>Days to finish the draft</span><input type="number" id="wDays" data-k="wdays" min="1" placeholder="90"><small>A 30-day sprint is 50,000 words at about 1,667 a day.</small></label>
+</div>
+<div class="calc">
+<div class="stat"><b id="perDay">–</b><span>words a day</span></div>
+<div class="stat"><b id="perCh">–</b><span>words a chapter</span></div>
+<div class="stat"><b id="pages">–</b><span>book pages (approx.)</span></div>
+</div>
+<label class="f"><span>When &amp; where I'll write</span><input type="text" data-k="when2" placeholder="e.g. 5:30 a.m. at the kitchen table, Sunday afternoons"></label>
+</section>
+
+<!-- STEP 6 -->
+<section class="step panel summary" data-title="Your Plan">
+<div class="mono no-print" style="color:var(--rose)">Step 6 of 6</div>
+<h2 id="sumTitle">Your novel plan</h2>
+<p class="lede no-print">Here's everything in one place. Print it, or choose "Save as PDF" in the print window.</p>
+<div class="nav-row no-print" style="margin:0 0 6px;justify-content:flex-start">
+<button class="btn rose" type="button" onclick="window.print()">Print / save as PDF</button>
+<button class="btn ghost" type="button" id="reset">Start a new plan</button>
+</div>
+<div class="sum" id="sum"></div>
+</section>
+
+<div class="nav-row">
+<button class="btn ghost" type="button" id="prev">← Back</button>
+<button class="btn primary" type="button" id="next">Next step →</button>
+</div>
+<p class="saved" id="saved">Your answers save on this device only</p>
+
+<section class="kit" aria-labelledby="kit-title">
+<div class="mock" aria-hidden="true"><strong>The Novel<br>Planning Kit</strong><small>Printable · 10 pages</small></div>
+<div>
+<div class="mono">Prefer pen and paper?</div>
+<h2 id="kit-title">The Novel Planning Kit</h2>
+<p>The printable version of this planner: story board, chapter beat sheets, character and setting pages, and a 30-day word sprint tracker. US Letter and A4, instant download.</p>
+<a class="btn rose" href="https://www.etsy.com/listing/4598955170" target="_blank" rel="noopener">Get it on Etsy · $4.99</a>
+</div>
+</section>
+
+<section class="join" aria-labelledby="join-title">
+<h2 id="join-title">Writing along with me?</h2>
+<p>Join the Waypoint Ink letter for new books, writing tips and planner updates. Sent rarely.</p>
+<form id="nl" action="https://formspree.io/f/mljdgdzg" method="POST">
+<div class="row">
+<label for="nl-email" style="position:absolute;left:-9999px">Email address</label>
+<input type="email" id="nl-email" name="email" placeholder="you@example.com" required autocomplete="email">
+<button class="btn primary" type="submit">Join</button>
+</div>
+<input type="hidden" name="_subject" value="New Waypoint Ink subscriber (Start Writing page)">
+<input type="hidden" name="source" value="write">
+<div aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden"><input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></div>
+<p class="nl-status" role="status" aria-live="polite"></p>
+</form>
+</section>
+</main>
+
+<footer>
+<a href="index.html">Home</a><a href="fiction.html">Fiction</a><a href="kids.html">Children's Books</a><a href="https://www.etsy.com/shop/WaypointInk" target="_blank" rel="noopener">Etsy shop</a>
+<p>© 2026 Waypoint Ink. All rights reserved.</p>
+</footer>
+
+<script>
+(function(){
+var KEY='wpi-novel-plan-v1', state={};
+try{state=JSON.parse(localStorage.getItem(KEY))||{}}catch(e){state={}}
+state.chars=state.chars||[{}]; state.chapters=state.chapters||{}; state.chCount=state.chCount||20;
+function save(){try{localStorage.setItem(KEY,JSON.stringify(state))}catch(e){}}
+var steps=[].slice.call(document.querySelectorAll('section.step')), cur=Math.min(+state.step||0,steps.length-1);
+var nav=document.getElementById('steps');
+steps.forEach(function(s,i){var li=document.createElement('li'),b=document.createElement('button');b.type='button';b.textContent=(i+1)+'. '+s.dataset.title;b.onclick=function(){go(i)};li.appendChild(b);nav.appendChild(li)});
+function go(i){cur=i;state.step=i;save();steps.forEach(function(s,j){s.hidden=j!==i});
+ [].forEach.call(nav.querySelectorAll('button'),function(b,j){b.toggleAttribute('aria-current',false);if(j===i)b.setAttribute('aria-current','step');b.classList.toggle('done',j<i)});
+ document.getElementById('bar').style.width=((i+1)/steps.length*100)+'%';
+ document.getElementById('prev').style.visibility=i?'visible':'hidden';
+ document.getElementById('next').hidden=i===steps.length-1;
+ if(i===steps.length-1)summary();
+ window.scrollTo({top:nav.offsetTop-20,behavior:'smooth'});}
+document.getElementById('prev').onclick=function(){go(Math.max(0,cur-1))};
+document.getElementById('next').onclick=function(){go(Math.min(steps.length-1,cur+1))};
+// simple fields
+[].forEach.call(document.querySelectorAll('[data-k]'),function(el){if(state[el.dataset.k]!=null)el.value=state[el.dataset.k];el.addEventListener('input',function(){state[el.dataset.k]=el.value;save();calc()})});
+// characters
+var CF=[['name','Name','text'],['role','Role in the story','text'],['want','Wants','area'],['need','Needs','area'],['fear','Fear or secret','area'],['change','How they change','area']];
+function esc(s){return String(s||'').replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function renderChars(){var box=document.getElementById('chars');box.innerHTML='';
+ state.chars.forEach(function(c,i){var d=document.createElement('div');d.className='item';
+  d.innerHTML=(state.chars.length>1?'<button class="rm" type="button" aria-label="Remove character">×</button>':'')+'<div class="grid2">'+CF.map(function(f){return '<label class="f"><span>'+(i===0&&f[0]==='name'?'Main character':f[1])+'</span>'+(f[2]==='text'?'<input type="text" data-f="'+f[0]+'" value="'+esc(c[f[0]])+'">':'<textarea data-f="'+f[0]+'">'+esc(c[f[0]])+'</textarea>')+'</label>'}).join('')+'</div>';
+  [].forEach.call(d.querySelectorAll('[data-f]'),function(el){el.addEventListener('input',function(){c[el.dataset.f]=el.value;save()})});
+  var rm=d.querySelector('.rm');if(rm)rm.onclick=function(){state.chars.splice(i,1);save();renderChars()};
+  box.appendChild(d)})}
+document.getElementById('addChar').onclick=function(){state.chars.push({});save();renderChars()};
+renderChars();
+// board
+var chIn=document.getElementById('chCount');chIn.value=state.chCount;
+function actOf(n,N){var p=n/N;return p<=.25?'Act One · Setup':p<=.5?'Act Two · Rising':p<=.75?'Act Two · Unraveling':'Act Three · Climax'}
+function renderBoard(){var N=Math.max(5,Math.min(60,+chIn.value||20)),b=document.getElementById('board'),last='';b.innerHTML='';
+ for(var n=1;n<=N;n++){var a=actOf(n,N);if(a!==last){var h=document.createElement('div');h.className='act';h.textContent=a;b.appendChild(h);last=a}
+  var c=state.chapters[n]||{},d=document.createElement('div');d.className='card';
+  d.innerHTML='<div class="top"><b>Ch '+n+'</b><i>'+(n===1?'Opening hook':n===Math.round(N/2)?'Midpoint':n===N?'Ending':'')+'</i></div><input type="text" placeholder="Title" data-c="t" value="'+esc(c.t)+'"><textarea placeholder="What happens?" data-c="w">'+esc(c.w)+'</textarea>';
+  (function(n,d){[].forEach.call(d.querySelectorAll('[data-c]'),function(el){el.addEventListener('input',function(){state.chapters[n]=state.chapters[n]||{};state.chapters[n][el.dataset.c]=el.value;save()})})})(n,d);
+  b.appendChild(d)}}
+chIn.addEventListener('change',function(){state.chCount=+chIn.value;save();renderBoard();calc()});
+renderBoard();
+// calc
+function fmt(n){return isFinite(n)&&n>0?Math.round(n).toLocaleString():'–'}
+function calc(){var t=+state.wtotal||0,d=+state.wdays||0,N=+state.chCount||20;
+ document.getElementById('perDay').textContent=fmt(t/d);document.getElementById('perCh').textContent=fmt(t/N);document.getElementById('pages').textContent=fmt(t/275)}
+calc();
+// summary
+function sumHTML(){var s=state,o='';function blk(h,pairs){var body=pairs.filter(function(p){return p[1]}).map(function(p){return '<div class="k">'+p[0]+'</div><p>'+esc(p[1])+'</p>'}).join('');o+='<h3>'+h+'</h3>'+(body||'<p class="empty">Nothing here yet.</p>')}
+ document.getElementById('sumTitle').textContent=s.title?s.title:'Your novel plan';
+ blk('The idea',[['Genre',s.genre],['Logline',s.logline],['What it\'s about',s.premise],['Stakes',s.stakes],['Ending',s.ending],['The secret',s.secret]]);
+ o+='<h3>Characters</h3>';var any=0;s.chars.forEach(function(c){var p=CF.filter(function(f){return c[f[0]]&&f[0]!=='name'}).map(function(f){return '<div class="k">'+f[1]+'</div><p>'+esc(c[f[0]])+'</p>'}).join('');if(c.name||p){any=1;o+='<p><b>'+esc(c.name||'Unnamed')+'</b></p>'+p}});if(!any)o+='<p class="empty">Nothing here yet.</p>';
+ blk('Setting',[['Place',s.place],['When',s.when],['Senses',s.senses],['History & legends',s.history],['Why it matters',s.placewhy]]);
+ o+='<h3>Story board</h3><ol>';var N=+s.chCount||20,has=0;for(var n=1;n<=N;n++){var c=s.chapters[n]||{};if(c.t||c.w){has=1}o+='<li><b>'+esc(c.t||'')+'</b>'+(c.w?(c.t?' · ':'')+esc(c.w):(c.t?'':'<span class="empty">—</span>'))+'</li>'}o+='</ol>';
+ blk('Word goal',[['Target',s.wtotal?(+s.wtotal).toLocaleString()+' words':''],['Days',s.wdays],['Per day',s.wtotal&&s.wdays?fmt(s.wtotal/s.wdays)+' words':''],['When & where',s.when2]]);
+ return o}
+function summary(){document.getElementById('sum').innerHTML=sumHTML()}
+document.getElementById('reset').onclick=function(){if(!confirmReset())return;state={chars:[{}],chapters:{},chCount:20};save();location.reload()};
+function confirmReset(){var b=document.getElementById('reset');if(b.dataset.armed){return true}b.dataset.armed=1;b.textContent='Tap again to erase this plan';setTimeout(function(){delete b.dataset.armed;b.textContent='Start a new plan'},4000);return false}
+go(cur);
+// newsletter
+var f=document.getElementById('nl');if(window.fetch)f.addEventListener('submit',function(e){e.preventDefault();var s=f.querySelector('.nl-status'),b=f.querySelector('button');b.disabled=true;s.textContent='Sending…';
+ fetch(f.action,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}}).then(function(r){s.textContent=r.ok?'Thank you, you’re on the list.':'Something went wrong. Please try again.';if(r.ok)f.reset()}).catch(function(){s.textContent='Could not connect. Please try again.'}).then(function(){b.disabled=false})});
+})();
+</script>
+</body>
+</html>
