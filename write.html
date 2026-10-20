@@ -103,6 +103,20 @@ input:focus,textarea:focus{outline:2px solid var(--accent);outline-offset:1px}
 .sum .empty{color:var(--soft);font-style:italic}
 
 /* kit promo */
+.howto{margin:0 0 28px;padding:24px clamp(18px,4vw,32px);border-radius:18px;border:1px solid var(--line);background:var(--card)}
+.howto h2,.craft h2{font-family:'Fraunces',serif;font-weight:500;font-size:1.6rem;margin:6px 0 14px}
+.howto ol{margin:0;padding-left:1.3em;display:grid;gap:8px}
+.howto li::marker{color:var(--rose);font-weight:600}
+.howto p.small{color:var(--soft);font-size:.92rem;margin:14px 0 0}
+details.more{margin:0 0 22px;border:1px dashed var(--line);border-radius:12px;padding:10px 16px}
+details.more summary{cursor:pointer;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--rose)}
+details.more ul{margin:12px 0 4px;padding-left:1.2em;display:grid;gap:8px;font-size:.95rem}
+.craft{margin:48px 0 0}
+.craft .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:16px}
+.craft .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px}
+.craft .card h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin:0 0 8px}
+.craft .card p{margin:0;color:var(--soft);font-size:.95rem;line-height:1.6}
+.craft .intro{color:var(--soft);max-width:62ch}
 .kit{display:grid;grid-template-columns:1fr 1.2fr;gap:28px;align-items:center;margin:48px 0 0;padding:28px;border-radius:18px;background:#1B1D22;color:#F1EFE8}
 .kit .mono{color:#D7B79E}
 .kit h2{font-family:'Fraunces',serif;font-weight:500;font-size:1.8rem;margin:8px 0}
@@ -128,7 +142,7 @@ footer a{margin:0 10px}
 /* print: only the plan */
 @media print{
   body{background:#fff;color:#000}
-  .site-header,.hero,.steps,.progress,.nav-row,.kit,.join,footer,.saved,.no-print{display:none!important}
+  .site-header,.hero,.howto,.craft,details.more,.steps,.progress,.nav-row,.kit,.join,footer,.saved,.no-print{display:none!important}
   section.step{display:none!important}
   section.step.summary{display:block!important}
   .panel{border:0;box-shadow:none;padding:0}
@@ -147,6 +161,19 @@ footer a{margin:0 10px}
 <p class="note mono">Takes 20–40 minutes · saves as you go · print it when you're done</p>
 </section>
 
+<section class="howto" aria-labelledby="howto-title">
+<div class="mono" style="color:var(--rose)">How to use this planner</div>
+<h2 id="howto-title">Six short steps, at your own pace</h2>
+<ol>
+<li><strong>Go in order, or jump around.</strong> Use the step buttons below to move between sections. Nothing is required, so skip anything you're not ready to answer.</li>
+<li><strong>Write fast and messy.</strong> A few words in each box is plenty. You're making a map, not the book.</li>
+<li><strong>Your answers save automatically</strong> in this browser on this device. Close the page and come back anytime; they'll be waiting. (They won't move to another phone or computer.)</li>
+<li><strong>Open "More help with this step"</strong> under each step for extra prompts and examples when you get stuck.</li>
+<li><strong>Finish on Step 6.</strong> It gathers everything into one plan you can print or save as a PDF to keep beside you while you draft.</li>
+<li><strong>Start over anytime</strong> with "Start a new plan" on the last step. Print first if you want to keep the old one.</li>
+</ol>
+<p class="small">If you use a private window or clear your browser history, your answers won't be saved, so print or save a PDF when you're done.</p>
+</section>
 <ol class="steps" id="steps"></ol>
 <div class="progress"><span id="bar"></span></div>
 
@@ -155,6 +182,7 @@ footer a{margin:0 10px}
 <div class="mono" style="color:var(--rose)">Step 1 of 6</div>
 <h2>Find the heart of your story</h2>
 <p class="lede">Don't worry about getting it perfect. You're sketching, not carving. You can change any of this later.</p>
+<details class="more"><summary>More help with this step</summary><ul><li><strong>Stuck for an idea?</strong> Ask "what if?" about something you can't stop thinking about: a place, a fear, a memory, a news story.</li><li><strong>Logline example:</strong> "When her village's wells run dry, a restless girl must cross a dying land to find a seer before the last magic is gone."</li><li><strong>Pick your genre early.</strong> It tells you what readers expect: romance needs a happy ending, mystery needs fair clues, horror needs dread.</li><li><strong>Knowing your ending is a compass, not a cage.</strong> It's fine if it changes once you get there.</li></ul></details>
 <div class="tip"><b>Tip</b>A logline is your whole book in one sentence: <em>who</em> wants <em>what</em>, and <em>what's in the way</em>.</div>
 <div class="grid2">
 <label class="f"><span>Working title</span><input type="text" data-k="title" placeholder="It's okay if it's temporary"></label>
@@ -175,6 +203,7 @@ footer a{margin:0 10px}
 <h2>Meet your people</h2>
 <p class="lede">Start with your main character. Add anyone whose choices change the story.</p>
 <div class="tip"><b>Tip</b>What a character <em>wants</em> drives the plot. What they <em>need</em> (and don't know they need) gives the story its heart.</div>
+<details class="more"><summary>More help with this step</summary><ul><li><strong>Want vs. need:</strong> she wants to win the competition; she needs to stop proving herself to her father.</li><li><strong>Give every main character a flaw</strong> that causes real trouble in the story, not just a quirk.</li><li><strong>Villains believe they're right.</strong> Write down what your antagonist thinks they're protecting.</li><li><strong>Try a quick interview:</strong> ask your character what they'd grab in a fire, what they lie about, and who they'd call at 2 a.m.</li></ul></details>
 <div id="chars"></div>
 <button class="btn ghost" type="button" id="addChar">+ Add a character</button>
 </section>
@@ -185,6 +214,7 @@ footer a{margin:0 10px}
 <h2>Build the world</h2>
 <p class="lede">Specific beats general. One strange, true detail makes a place feel real.</p>
 <div class="grid2">
+<details class="more"><summary>More help with this step</summary><ul><li><strong>Use all five senses,</strong> especially smell and sound; they make a scene feel lived in.</li><li><strong>Rules matter more than maps.</strong> If there's magic or technology, note what it costs and what it can't do.</li><li><strong>Let the setting push back.</strong> Weather, distance, laws and customs should make life harder for your characters.</li><li><strong>Real places count too.</strong> If you're writing your hometown, walk it with a notebook.</li></ul></details>
 <label class="f"><span>Main place</span><input type="text" data-k="place" placeholder="A town, a ship, a kingdom, a kitchen…"></label>
 <label class="f"><span>When</span><input type="text" data-k="when" placeholder="Season, year, era"></label>
 </div>
@@ -201,6 +231,7 @@ footer a{margin:0 10px}
 <h2>Board the whole story</h2>
 <p class="lede">One or two lines per chapter is plenty. Most first novels land around 20–30 chapters.</p>
 <div class="tip"><b>Tip</b>Roughly: the first quarter sets things up, something big shifts at the middle, everything falls apart near three-quarters, then the climax.</div>
+<details class="more"><summary>More help with this step</summary><ul><li><strong>Each chapter needs a change.</strong> Someone learns something, loses something, or makes a choice. If nothing changes, combine or cut it.</li><li><strong>End chapters on a question</strong> so readers turn the page.</li><li><strong>The midpoint is a turn,</strong> not just more of the same: a reveal, a betrayal, a shift from running to fighting back.</li><li><strong>Blank chapters are fine.</strong> Fill in the ones you can see and let the gaps surprise you while drafting.</li></ul></details>
 <label class="f" style="max-width:260px"><span>Number of chapters</span><input type="number" id="chCount" min="5" max="60" value="20"></label>
 <div class="board" id="board"></div>
 </section>
@@ -219,6 +250,7 @@ footer a{margin:0 10px}
 <div class="stat"><b id="perCh">–</b><span>words a chapter</span></div>
 <div class="stat"><b id="pages">–</b><span>book pages (approx.)</span></div>
 </div>
+<details class="more"><summary>More help with this step</summary><ul><li><strong>Small and steady wins.</strong> 300 words a day is a 90,000-word novel in under a year.</li><li><strong>Track words, not hours.</strong> A visible count keeps you honest and motivated.</li><li><strong>Stop mid-sentence.</strong> It's easier to start tomorrow when you know exactly what comes next.</li><li><strong>Missed a day? Just start again.</strong> Don't try to make up the words all at once.</li></ul></details>
 <label class="f"><span>When &amp; where I'll write</span><input type="text" data-k="when2" placeholder="e.g. 5:30 a.m. at the kitchen table, Sunday afternoons"></label>
 </section>
 
@@ -240,6 +272,21 @@ footer a{margin:0 10px}
 </div>
 <p class="saved" id="saved">Your answers save on this device only</p>
 
+<section class="craft" aria-labelledby="craft-title">
+<div class="mono" style="color:var(--rose)">Writing advice</div>
+<h2 id="craft-title">Once you start drafting</h2>
+<p class="intro">A plan gets you to the page. These habits get you to "The End."</p>
+<div class="grid">
+<div class="card"><h3>Give yourself permission to write badly</h3><p>First drafts are supposed to be messy. Get the story down, then make it good in revision. You can't edit a blank page.</p></div>
+<div class="card"><h3>Don't edit while you draft</h3><p>Keep moving forward. If something's wrong, leave a note in brackets, like [fix this later], and keep going.</p></div>
+<div class="card"><h3>Show what characters feel</h3><p>Instead of "she was nervous," show her checking the lock twice. Let readers feel it through actions, bodies and choices.</p></div>
+<div class="card"><h3>Make every scene earn its place</h3><p>Every scene should move the plot, reveal character, or raise the stakes. The best scenes do all three.</p></div>
+<div class="card"><h3>Read your dialogue out loud</h3><p>If it sounds stiff when you say it, it reads stiff too. People interrupt, dodge questions and leave things unsaid.</p></div>
+<div class="card"><h3>Find your sounding boards</h3><p>Talk your story through with someone you trust. Saying ideas out loud often shows you what's working and what isn't.</p></div>
+<div class="card"><h3>Rest, then revise</h3><p>When the draft is done, put it away for a few weeks. You'll come back with fresh eyes and see what needs fixing.</p></div>
+<div class="card"><h3>Read like a writer</h3><p>Read widely in your genre. When a book grabs you, go back and notice how the author did it.</p></div>
+</div>
+</section>
 <section class="kit" aria-labelledby="kit-title">
 <div class="mock" aria-hidden="true"><strong>The Novel<br>Planning Kit</strong><small>Printable · 10 pages</small></div>
 <div>
