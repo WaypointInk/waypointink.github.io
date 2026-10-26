@@ -11,7 +11,11 @@
 <meta property="og:title" content="About Jessica Sellars · Waypoint Ink">
 <meta property="og:description" content="Meet Jessica Sellars, the author behind Waypoint Ink, who also writes slipstream and YA fantasy as J.R. Deem.">
 <meta property="og:url" content="https://waypointink.com/about.html">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://waypointink.com/assets/social/about.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Jessica Sellars, also writing as J.R. Deem, with roses and a camellia from her garden">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#14161B">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2314161B'/%3E%3Cpath d='M32 12 L44 40 L32 34 L20 40 Z' fill='%23D7B79E'/%3E%3Ccircle cx='32' cy='50' r='3' fill='%23D7B79E'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -479,7 +483,7 @@ footer{padding-inline:20px;}
 .about-author .aa-photo{width:200px; aspect-ratio:1; border-radius:50%; display:grid; place-items:center; padding:6px; background:conic-gradient(from 200deg, var(--aa-pink), var(--aa-teal), #F6B8CB, var(--aa-pink));}
 .about-author .aa-photo span, .about-author .aa-photo img{width:100%; height:100%; border-radius:50%; background:#fff; display:grid; place-items:center; font-family:var(--mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--aa-pink-deep); text-align:center; line-height:1.7; object-fit:cover;}
 .about-author .aa-eyebrow{font-family:var(--mono); font-size:11.5px; letter-spacing:.18em; text-transform:uppercase; color:var(--aa-teal); font-weight:600;}
-.about-author h2{font-family:'Fraunces', Georgia, serif; font-style:italic; font-weight:500; font-size:clamp(1.9rem, 4vw, 2.5rem); color:var(--aa-pink-deep); margin:8px 0 16px; line-height:1.1;}
+.about-author :is(h1,h2){font-family:'Fraunces', Georgia, serif; font-style:italic; font-weight:500; font-size:clamp(1.9rem, 4vw, 2.5rem); color:var(--aa-pink-deep); margin:8px 0 16px; line-height:1.1; letter-spacing:normal;}
 .about-author .aa-aka{display:block; font-style:normal; font-family:var(--mono); font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; color:var(--aa-teal); margin-top:8px;}
 .about-author p{color:var(--aa-plum); font-size:1.02rem; line-height:1.75; margin:0 0 12px; position:relative;}
 .about-author p:last-child{margin-bottom:0;}
@@ -520,6 +524,54 @@ footer{padding-inline:20px;}
 .join-band.jb-dark{--jb-accent:#D97C5F; --jb-ink:#F3F1EA; --jb-field:#1E2027; --jb-line:#3A3E47; --jb-heart:#D97C5F; --jb-ok:#8FC79A; background:color-mix(in srgb, #fff 5%, transparent); border:1px solid var(--hub-hero-line); color:var(--hub-hero-ink);}
 .join-band.jb-dark p{color:var(--hub-hero-ink-soft);}
 </style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "ProfilePage",
+   "@id": "https://waypointink.com/about.html",
+   "url": "https://waypointink.com/about.html",
+   "name": "About Jessica Sellars",
+   "description": "Meet Jessica Sellars, the author behind Waypoint Ink, who also writes slipstream and YA fantasy as J.R. Deem.",
+   "isPartOf": {
+    "@id": "https://waypointink.com/#website"
+   },
+   "mainEntity": {
+    "@type": "Person",
+    "@id": "https://waypointink.com/#jessica-sellars",
+    "name": "Jessica Sellars",
+    "url": "https://waypointink.com/about.html",
+    "alternateName": "J.R. Deem",
+    "description": "Meet Jessica Sellars, the author behind Waypoint Ink, who also writes slipstream and YA fantasy as J.R. Deem.",
+    "jobTitle": "Author",
+    "email": "mailto:hello@waypointink.com",
+    "sameAs": [
+     "https://instagram.com/waypointink",
+     "https://www.etsy.com/shop/WaypointInk"
+    ]
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://waypointink.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "About",
+     "item": "https://waypointink.com/about.html"
+    }
+   ]
+  }
+ ]
+}
+</script>
 </head>
 <body>
 
@@ -528,11 +580,11 @@ footer{padding-inline:20px;}
 <section class="hub">
 <div class="wrap">
 <section class="about-author about-page" id="about" aria-labelledby="about-title">
-<img class="aa-flower f1" src="assets/garden-roses.webp" alt="" aria-hidden="true"><img class="aa-flower f2" src="assets/garden-camellia.webp" alt="" aria-hidden="true">
+<img class="aa-flower f1" src="assets/garden-roses.webp" alt="" aria-hidden="true" width="720" height="624"><img class="aa-flower f2" src="assets/garden-camellia.webp" alt="" aria-hidden="true" width="417" height="420">
 <div class="aa-photo" aria-hidden="true"><span>Headshot<br>coming soon</span></div>
 <div class="aa-copy">
 <span class="aa-eyebrow">About the author</span>
-<h2 id="about-title">Jessica Sellars <span class="aa-aka">also writing as J.R. Deem</span></h2>
+<h1 id="about-title">Jessica Sellars <span class="aa-aka">also writing as J.R. Deem</span></h1>
 <p>I have loved writing since high school, when I started filling notebooks with characters and worlds I kept mostly to myself. After years of carrying those stories around, I have finally decided to bring them to life: picture books for little readers under my own name, and slipstream and YA fantasy for grown-ups as J.R. Deem.</p>
 <p>Away from the page, I teach and have spent my career working in medicine. The thread through all of it is the same: I like to make life a little easier for the people around me, and to bring them some joy along the way.</p>
 <p>Every story I tell has had two sounding boards: my husband, and my brother Cody, who spent years listening to my ideas and talking them through with me. Cody passed away in 2025.</p>
