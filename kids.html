@@ -255,6 +255,24 @@ margin-top:8px;
 font-family:'Nunito', system-ui, sans-serif;
 }
 
+
+/* ---------- COLORING PAGES ---------- */
+.coloring{margin-top:56px;}
+.coloring .facts-intro{text-align:center; margin-bottom:28px;}
+.coloring .facts-intro .eyebrow{color:var(--kid-accent-2); font-family:var(--mono);}
+.coloring .facts-intro h2.section-title{font-family:'Baloo 2', system-ui, sans-serif; font-weight:700; font-size:clamp(1.7rem, 4vw, 2.3rem); margin-block:8px 10px; color:var(--kid-ink);}
+.coloring .facts-intro p{color:var(--kid-ink-soft); max-width:52ch; margin-inline:auto; font-size:.98rem; line-height:1.6;}
+.coloring-grid{display:grid; grid-template-columns:1.6fr 1fr; gap:20px; align-items:stretch;}
+@media (max-width:760px){ .coloring-grid{grid-template-columns:1fr;} }
+.coloring-card{background:var(--kid-bg-raised); border:1px solid var(--kid-line); border-radius:18px; padding:16px; display:flex; flex-direction:column; gap:12px;}
+.coloring-card .cp-img{flex:1; display:flex; align-items:center; justify-content:center; background:#fff; border-radius:12px; border:1px dashed var(--kid-line); overflow:hidden;}
+.coloring-card img{display:block; width:100%; height:auto;}
+.coloring-card h3{font-family:'Baloo 2', system-ui, sans-serif; font-size:1.2rem; margin:0; color:var(--kid-ink);}
+.coloring-card .cp-btn{align-self:flex-start; display:inline-block; background:var(--kid-accent); color:#fff; text-decoration:none; font-weight:700; padding:10px 18px; border-radius:999px; font-size:.95rem;}
+.coloring-card .cp-btn:hover{background:var(--kid-accent-3);}
+.coloring .cp-note{text-align:center; font-size:.85rem; color:var(--kid-ink-soft); margin-top:14px;}
+
+
 /* ---------- BREED FACTS ---------- */
 .breed-facts{
 margin-top:56px;
@@ -788,6 +806,27 @@ body{position:relative;}
 </div>
 </div>
 <p class="where" style="flex-basis:100%; margin:0;">Signed copies of Echo's ABC $12.99 · Echo T-shirts $15 · Every purchase enters you to win a copy of <em>Echo Goes to the Vet</em>!</p>
+</div>
+
+<div class="coloring" id="coloring-pages">
+<div class="facts-intro">
+<span class="eyebrow">Free printables</span>
+<h2 class="section-title">Echo coloring pages</h2>
+<p>Download, print, and color. These pages are drawn by Esther Rai, the illustrator behind the Echo books.</p>
+</div>
+<div class="coloring-grid">
+<div class="coloring-card">
+<div class="cp-img"><img src="assets/coloring/echo-couch-coloring-page.jpg" alt="Coloring page: Echo napping on the couch while someone pets her" loading="lazy" width="900" height="456"></div>
+<h3>Couch cuddles</h3>
+<a class="cp-btn" href="assets/coloring/echo-couch-coloring-page.pdf" download>Download PDF</a>
+</div>
+<div class="coloring-card">
+<div class="cp-img"><img src="assets/coloring/echo-books-coloring-page.jpg" alt="Coloring page: Echo sitting between stacks of books" loading="lazy" width="900" height="900"></div>
+<h3>Echo loves books</h3>
+<a class="cp-btn" href="assets/coloring/echo-books-coloring-page.pdf" download>Download PDF</a>
+</div>
+</div>
+<p class="cp-note">Free for home, classroom, and library use. Printed on standard letter paper.</p>
 </div>
 
 <div class="breed-facts">
