@@ -54,6 +54,12 @@ p{margin:0;}
 .photo-slot .ph{aspect-ratio:3/2; border-radius:14px; border:2px dashed color-mix(in srgb, var(--pink) 55%, transparent); background:var(--pink-soft); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; text-align:center; padding:20px;}
 .photo-slot .ph .mono{color:var(--pink);}
 .photo-slot .ph .what{font-style:italic; color:var(--ink-soft); font-size:1rem;}
+.photo-slot img{display:block; width:100%; height:auto; border-radius:14px; box-shadow:0 6px 24px rgba(0,0,0,.12);}
+.photo-slot.cover img{max-width:420px; margin:0 auto;}
+.photo-slot .row{display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:14px; align-items:start;}
+.photo-slot .row.three{grid-template-columns:repeat(3, minmax(0,1fr));}
+@media (max-width:640px){ .photo-slot .row.three{grid-template-columns:repeat(2, minmax(0,1fr));} }
+.photo-slot figcaption{margin-top:10px; text-align:center; font-style:italic; color:var(--ink-soft); font-size:.95rem;}
 
 .more{padding-block:20px 80px; border-top:1px solid var(--line);}
 .more h2{color:var(--ink-soft); margin:28px 0 16px;}
